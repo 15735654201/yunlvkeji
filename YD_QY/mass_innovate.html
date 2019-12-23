@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”>
+		<title>众创空间</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fontsize.js"></script>
+		<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<style type="text/css">
+			/* banner */
+			.content .banner {
+				background-image: url("images/banner/banner05.png");
+			}
+			
+			
+			/* 服务内容 */
+			.service_content{
+				border-bottom: 1px solid #e6e7eb;
+			}
+			.service_content .scontent_box ul li {
+				float: left;
+				width: 20%;
+				text-align: center;
+			}
+			.service_content .scontent_box ul li:nth-child(1),
+			.service_content .scontent_box ul li:nth-child(2),
+			.service_content .scontent_box ul li:nth-child(3),
+			.service_content .scontent_box ul li:nth-child(4),
+			.service_content .scontent_box ul li:nth-child(5) {
+				margin-bottom: 65px;
+			}
+			.service_content .scontent_box ul li .scontent_img {
+				display: inline-block;
+				width: 76px;
+				height: 76px;
+				margin-bottom: 30px;
+				border: 1px solid #d2d2d2;
+				transition: transform 0.2s;
+			}
+			.service_content .scontent_box ul li:hover .scontent_img {
+				border-color: #f1d75c;
+				transform: rotateZ(45deg);
+			}
+			.service_content .scontent_box ul li .scontent_img img {
+				margin: 22px;
+				width: 32px;
+				height: 32px;
+				transition: transform 0.2s;
+			}
+			.service_content .scontent_box ul li:hover .scontent_img img {
+				transform: rotateZ(-45deg);
+			}
+			.service_content .scontent_box ul li p {
+				font-size: 18px;
+				position: relative;
+				line-height: 50px;
+			}
+			.service_content .scontent_box ul li p.x_title:after {
+				display: inline-block;
+			    position: absolute;
+			    bottom: 0;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    width: 1em;
+			    height: 1px;
+			    content: "";
+			    background-color: #333333;
+			}
+			.service_content .scontent_box ul li:hover p.x_title {
+				color: #4a93ff;
+			}
+			
+			/* OUR HISTORY */
+			.our_history .ohistory_box>div {
+				float: left;
+				width: 47%;
+				margin: 0.8% 1.5%;
+			}
+			.our_history .ohistory_box .computer {
+				position: relative;
+				width: 45%;
+				margin-right: 3.5%;
+			}
+			.our_history .ohistory_box .computer img {
+				width: 100%;
+			}
+			.our_history .ohistory_box .computer .swiper-wrapper {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.our_history .ohistory_box .computer .swiper-wrapper .swiper-slide {
+				padding: 5% 4%;
+				box-sizing: border-box;
+			}
+			.our_history .ohistory_box .computer .swiper-wrapper .swiper-slide img {
+				border-radius: 3px;
+			}
+			.our_history .ohistory_box .text_nav .tit_text h1 {
+				color: #6a6a6a;
+				margin-top: 4.3%;
+				position: relative;
+				letter-spacing: 4px;
+				font-size: 36px;
+				text-indent: 1em;
+			}
+			.our_history .ohistory_box .text_nav .tit_text h1:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				content: "";
+				display: inline-block;
+				width: 0.2em;
+				height: 1em;
+				background-color: #4383e1;
+			}
+			.our_history .ohistory_box .text_nav .tit_text p {
+				color: #666666;
+				margin: 5% 0;
+				font-size: 18px;
+				line-height: 45px;
+				text-indent: 2em;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye {
+				position: relative;
+				margin-left: 20px;
+				text-align: left;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span {
+				position: relative;
+				margin: 0 10% 10% 0;
+				width: 42px;
+				height: 42px;
+				opacity: 1;
+				border: 1px solid #e5e5e5;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:first-child {
+				background: #ffffff url("images/mass/our_1.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(2) {
+				background: #ffffff url("images/mass/our_2.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(3) {
+				background: #ffffff url("images/mass/our_3.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(4) {
+				background: #ffffff url("images/mass/our_4.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(5) {
+				background: #ffffff url("images/mass/our_5.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(6) {
+				background: #ffffff url("images/mass/our_6.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(7) {
+				background: #ffffff url("images/mass/our_7.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(8) {
+				background: #ffffff url("images/mass/our_8.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:last-child {
+				background: #ffffff url("images/mass/our_9.png") 0px 0px/100% no-repeat;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span.swiper-pagination-bullet-active {
+				background-color: #e5e5e5;
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:after {
+				width: 100px;
+				font-size: 16px;
+				text-align: center;
+				display: inline-block;
+				position: absolute;
+				bottom: -34px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:first-child:after {
+				content: "办公工位";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(2):after {
+				content: "路演大厅";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(3):after {
+				content: "会议室";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(4):after {
+				content: "洽谈室";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(5):after {
+				content: "空调";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(6):after {
+				content: "电暖";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(7):after {
+				content: "宽带";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:nth-child(8):after {
+				content: "无线wifi";
+			}
+			.our_history .ohistory_box .text_nav .ico_fenye span:last-child:after {
+				content: "共享前台等";
+			}
+			
+			/* 众创活动 */
+			.mass_activity .zactivity_box {
+				position: relative;
+				overflow: hidden;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.huadong li {
+				padding: 0 0.8%;
+				margin-bottom: 54px;
+			    box-sizing: border-box;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.huadong li:nth-child(2n) {
+				margin-bottom: 0;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.gundong {
+				display: none;
+				width: 140%;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.gundong li {
+				padding: 0 1.5%;
+				box-sizing: border-box;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.gundong li div {
+				padding:  7%;
+				border-radius: 0.8rem;
+				box-sizing: border-box;
+				background-color: #ffffff;
+			}
+			.mass_activity .zactivity_box .zactivity_lunbo.gundong li div img {
+				width: 100%;
+			}
+			.swiper-container-free-mode>.swiper-wrapper {
+				transition-timing-function: linear;
+			}
+			.mass_activity .zactivity_box .fenye {
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.mass_activity .zactivity_box .fenye span {
+				width: 14px;
+				height: 14px;
+				margin: 0 7px;
+				cursor: pointer;
+			}
+			
+			/*  */
+			.content .middle_nav {
+				color: #666666;
+				padding: 0;
+				background-color: #e9e9e9;
+			}
+			.middle_nav ul li {
+				width: 20%;
+				float: left;
+				font-size: 20px;               
+				text-align: center;
+				line-height: 3em;
+			}
+			
+			/* 申请 */ 
+			.content .apply {
+				background-image: url("images/apply01.png");
+			}
+			
+			
+			/* 自适应 */
+			@media screen and (max-width: 1366px) {
+				/* 服务内容 */
+				.service_content .scontent_box ul li .scontent_img {
+					width: 66px;
+				    height: 66px;
+				    margin-bottom: 20px;
+				}
+				.service_content .scontent_box ul li .scontent_img img {
+					margin: 19px;
+				    width: 28px;
+				    height: 28px;
+				}
+				.service_content .scontent_box ul li p {
+					font-size: 16px;
+					line-height: 44px;
+				}
+				/* OUR HISTORY */
+				.our_history .ohistory_box .text_nav .tit_text h1 {
+				    letter-spacing: 2px;
+				    font-size: 32px;
+				}
+				.our_history .ohistory_box .text_nav .tit_text p {
+				    font-size: 16px;
+				    line-height: 40px;
+				}
+				.our_history .ohistory_box .text_nav .ico_fenye span:after {
+				    font-size: 14px;
+				}
+				/* 众创活动 */
+				.mass_activity .zactivity_box .fenye span {
+					width: 12px;
+				    height: 12px;
+				    margin: 0 6px;
+				}
+				/*  */
+				.middle_nav ul li {
+					font-size: 16px;
+				}
+			}
+			@media screen and (max-width: 1040px) {
+				.middle_nav ul li {
+				    font-size: 12px;
+				}
+			}
+			@media screen and (max-width: 750px) {
+				/* 服务内容 */
+				.service_content {
+					border-width: 0.5rem;
+					border-color: #f3f3f3;
+				}
+				.service_content .scontent_box ul li {
+					width: 50%;
+					margin-bottom: 3.4rem!important;
+				}
+				.service_content .scontent_box ul li:nth-last-child(2),
+				.service_content .scontent_box ul li:last-child {
+					margin-bottom: 0!important;
+				}
+				.service_content .scontent_box ul li .scontent_img {
+					width: 6rem;
+					height: 6rem;
+					margin-bottom: 1rem;
+				}
+				.service_content .scontent_box ul li .scontent_img img {
+					margin: 1.6rem;
+					width: 2.8rem;
+					height: 2.8rem;
+				}
+				.service_content .scontent_box ul li p {
+					font-size: 1.5rem;
+					line-height: 4.3rem;
+				}
+				/* OUR HISTORY */
+				.our_history .ohistory_box {
+					position: relative;
+				}
+				.our_history .ohistory_box:before {
+					position: absolute;
+					display: block;
+					content: "";
+					top: -7%;
+					right: 4%;
+					width: 14rem;
+					height: 14rem;
+					border-radius:50%;
+					background-color: #a6bbfe;
+				}
+				.our_history .ohistory_box>div {
+					float: none;
+					width: 86%;
+					margin: 0.8% 7%;
+				}
+				.our_history .ohistory_box .computer {
+					width: 75%;
+					overflow: visible;
+					margin: 13% auto 0 auto;
+				}
+				.our_history .ohistory_box .computer:before {
+					position: absolute;
+					display: block;
+					content: "";
+					bottom: 3%;
+					left: -7%;
+					width: 7.4rem;
+					height: 7.4rem;
+					border-radius:50%;
+					background-color: #a6bbfe;
+				}
+				.our_history .ohistory_box .computer img {
+					position: relative;
+				}
+				.our_history .ohistory_box .text_nav .tit_text h1 {
+					display: none;
+				}
+				.our_history .ohistory_box .text_nav .tit_text p {
+					margin: 2.1rem 0;
+					font-size: 1.3rem;
+					line-height: 2.4rem;
+				}
+				.our_history .ohistory_box .text_nav .ico_fenye {
+					display: flex;
+					flex-wrap:wrap;
+					justify-content: space-between;
+					margin-left: 0;
+					margin-top: -2rem;
+				}
+				.our_history .ohistory_box .text_nav .ico_fenye span {
+					margin: 2rem 7% 2.8rem 7%;
+					width: 4rem;
+					height: 4rem;
+				}
+				.our_history .ohistory_box .text_nav .ico_fenye span:after {
+					width: 7rem;
+					font-size: 1.3rem;
+					bottom: -2.8rem;
+				}
+				/* 入驻流程 */
+				.content .flow {
+					border-bottom: none;
+				}
+				/* 众创活动 */
+				.mass_activity {
+					background-color: #f8f9fb;
+				}
+				.mass_activity .zactivity_box .zactivity_lunbo.huadong {
+					display: none;
+				}
+				.mass_activity .zactivity_box .zactivity_lunbo.gundong {
+					display: block;
+				}
+				/*  */
+				.content .middle_nav {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="maxwidth clearf">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo图" />
+					</a>
+				</div>
+				<div class="nav_btn"></div>
+				<ul class="nav clearf">
+					<li>
+						<a href="index.html">首页</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="union.html">云旅联盟</a>
+						<i></i>
+					</li>
+					<li class="active">
+						<a href="mass_innovate.html">众创空间</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="cooperate.html">合作伙伴</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="dynamic.html">云旅动态</a>
+						<i></i>
+					</li>
+					<li class="li_nav">
+						<a href="javascript:;">了解云旅</a>
+						<i></i>
+						<ul class="nav_c">
+							<li>
+								<a href="introduce.html">公司简介</a>
+							</li>
+							<li>
+								<a href="deeds.html">历史事迹</a>
+							</li>
+							<li>
+								<a href="case.html">客户案例</a>
+							</li>
+							<li>
+								<a href="join.html">加入我们</a>
+							</li>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<div class="headBtn">
+					<button class="login">登录</button>
+					<button class="register">注册</button>
+				</div>-->
+				<div class="cell clearf">
+					<i></i>
+					<span>0351-5679124</span>
+				</div>
+			</div>
+		</header>
+		
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- banner图 -->
+			<section class="banner">
+				<div class="banner_text">
+					<h1>WELCOME TO SPACE</h1>
+					<p>从0——1，云旅助力创业梦想</p>
+					<span class="blue_spot"></span>
+				</div>
+				<div class="banner_btn">
+					<!--<a href="">
+						<button class="white_blue">了解更多</button>
+					</a>-->
+					<a href="javascript:;">
+						<button class="clarity_white applybtn">加入众创</button>
+					</a>
+				</div>
+			</section>
+			
+			<!-- 服务内容 -->
+			<section class="service_content">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2>服务内容</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div class="scontent_box">
+						<ul class="clearf">
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_1.png" alt="" />
+								</div>
+								<p class="x_title">工商办理</p>
+								<p>BUSINESS</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_2.png" alt="" />
+								</div>
+								<p class="x_title">财务服务</p>
+								<p>FINANCE</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_3.png" alt="" />
+								</div>
+								<p class="x_title">法务服务</p>
+								<p>BUSINESS</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_4.png" alt="" />
+								</div>
+								<p class="x_title">创业扶持政策对接</p>
+								<p>SPPORT</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_5.png" alt="" />
+								</div>
+								<p class="x_title">沙龙及项目路演</p>
+								<p>LANVH  DAY</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_6.png" alt="" />
+								</div>
+								<p class="x_title">渠道共享</p>
+								<p>CHANNEL</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_7.png" alt="" />
+								</div>
+								<p class="x_title">云服务平台提供</p>
+								<p>SERVICE</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_8.png" alt="" />
+								</div>
+								<p class="x_title">创业导师资源对接</p>
+								<p>RESOURCES</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_9.png" alt="" />
+								</div>
+								<p class="x_title">产业链上下游资源对接</p>
+								<p>INSTURY</p>
+							</li>
+							<li>
+								<div class="scontent_img">
+									<img src="images/mass/service_10.png" alt="" />
+								</div>
+								<p class="x_title">投融资对接</p>
+								<p>FINANCING</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<!-- OUR HISTORY -->
+			<section class="our_history">
+				<div class="maxwidth">
+					<div class="ohistory_box clearf">
+						<div class="computer swiper-container swiper-no-swiping">
+							<img src="images/mass/computer.png" alt="" />
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/mass/computer_01.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_02.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_03.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_04.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_05.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_06.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_07.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_08.jpg"alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="images/mass/computer_09.jpg"alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="text_nav">
+							<div class="tit_text">
+								<h1>OUR HISTORY</h1>
+								<p>云旅天下众创空间是一个针对旅游行业的创业服务平台，致力于打造 旅行社产业链相关的、互为支持的众创型服务生态系统。</p>
+							</div>	
+							<div class="swiper-pagination ico_fenye"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- 入驻流程 -->
+			<section class="flow">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2 class="white">入驻流程</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div class="flow_box">
+						<ul class="clearf">
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_1.png" alt="" />
+								</div>
+								<p>提交入驻申请表</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_2.png" alt="" />
+								</div>
+								<p>入驻申请资料审核</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_3.png" alt="" />
+								</div>
+								<p>入驻创业团队面谈</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_4.png" alt="" />
+								</div>
+								<p>签订合作合同</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_5.png" alt="" />
+								</div>
+								<p>进驻创客空间</p>
+							</li>
+						</ul>
+					</div>
+					<div class="flow_box2">
+						<ul>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_1.png" alt="" />
+								</div>
+								<p><span>①</span>提交入驻申请表</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_2.png" alt="" />
+								</div>
+								<p><span>②</span>入驻申请资料审核</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_3.png" alt="" />
+								</div>
+								<p><span>③</span>入驻创业团队面谈</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_4.png" alt="" />
+								</div>
+								<p><span>④</span>签订合作合同</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_5.png" alt="" />
+								</div>
+								<p><span>⑤</span>进驻创客空间</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<!-- 众创活动 -->
+			<section class="mass_activity">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2>众创活动</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div class="zactivity_box">
+						<div class="swiper-container zactivity_lunbo huadong">
+				        	<ul class="swiper-wrapper clear">
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_01.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_02.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_03.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_04.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_05.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_06.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_07.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/mass/mass_08.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        	</ul>
+				        </div>
+					    <!-- 如果需要分页器 -->
+					    <!--<div class="swiper-pagination fenye"></div>-->
+
+					    <!-- 如果需要导航按钮 -->
+					    <!--<div class="swiper-button-prev"></div>-->
+					    <!--<div class="swiper-button-next"></div>-->
+
+					    <!-- 如果需要滚动条 -->
+					    <!--<div class="swiper-scrollbar"></div>-->
+					</div>
+					<div class="zactivity_box">
+						<div class="swiper-container zactivity_lunbo gundong">
+				        	<ul class="swiper-wrapper clear">
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_01.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_02.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_03.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_04.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_05.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_06.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_07.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide swiper-no-swiping">
+			        				<div>
+			        					<img src="images/mass/mass_08.jpg" alt="" />
+			        				</div>
+				        		</li>
+				        	</ul>
+				       </div>
+					</div>
+				</div>
+			</section>
+			
+			<!--  -->
+			<section class="middle_nav">
+				<ul class="maxwidth clearf">
+					<li>
+						<a target="_blank" href="http://www.sxsfq.gov.cn/">综改示范区官网</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sxinfo.gov.cn/">山西省科学技术厅</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.shanxieic.gov.cn/">山西省经济和信息化</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.sfqkc.com/">科技创新服务平台</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://zjfw.sxsfq.gov.cn/subsite/zjfw/index.jhtml">综改示范区中介服务平台</a>
+					</li>
+				</ul>
+			</section>
+			
+			<!-- 申请加入 -->
+			<section class="apply">
+				<h1>云旅 · 众创空间</h1>
+				<h3>从0——1，助力你的创业梦想</h3>
+				<button class="clarity_white_circular applybtn">申请加入</button>
+			</section>
+		</div>
+		
+		<!-- 尾部 -->
+		<footer>
+			<div class="maxwidth">
+				<div class="nav-block clearf">
+					<ul>
+						<li>
+							<h4>云旅</h4>
+							<p>Yunlv</p>
+						</li>
+						<li>
+							<p><a href="union.html">云旅联盟</a></p>
+						</li>
+						<li>
+							<p><a href="mass_innovate.html">众创空间</a></p>
+						</li>
+						<li>
+							<p><a href="cooperate.html">合作伙伴</a></p>
+						</li>
+						<li>
+							<p><a href="dynamic.html">云旅动态</a></p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>关于</h4>
+							<p>About</p>
+						</li>
+						<li>
+							<p><a href="introduce.html">公司简介</a></p>
+						</li>
+						<li>
+							<p><a href="deeds.html">历史事迹</a></p>
+						</li>
+						<li>
+							<p><a href="case.html">客户案例</a></p>
+						</li>
+						<li>
+							<p><a href="join.html">加入我们</a></p>
+						</li>
+						<li>
+							<p><a href="contact.html">联系我们</a></p>
+							
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>商务合作</h4>
+							<p>Business</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679124</p>
+						</li>
+						<li>
+							<p>客服邮箱：zhaoliming@yunlvkeji.com</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<h4>联系我们</h4>
+							<p>Conntacts</p>
+						</li>
+						<li>
+							<p>公司地址：山西省太原市南内环街清控创新基地D座20层</p>
+						</li>
+						<li>
+							<p>邮箱：yangqing@yunlvkeji.com</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679128</p>
+						</li>
+						<li>
+							<p class="public_num">
+								关注云旅公众号
+								<i>
+									<span>
+										<img src="images/code.jpg"/>
+									</span>
+								</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile_footer">
+					<dl class="about_us">
+						<dt>了解云旅</dt>
+							<dd><a href="introduce.html">公司简介</a></dd>
+							<dd><a href="deeds.html">历史事迹</a></dd>
+							<dd><a href="case.html">客户案例</a></dd>
+							<dd><a href="join.html">加入我们</a></dd>
+							<dd><a href="contact.html">联系我们</a></dd>
+					</dl>
+					<div class="contact_us">
+						<ul>
+							<li>商务合作：0351-5679124</li>
+							<li>客服邮箱：zhaoliming@yunlvkeji.com</li>
+							<li>业务咨询：0351-5679128</li>
+						</ul>
+						<div class="code">
+							<img src="images/code.jpg" alt="" />
+							<p>关注云旅公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="maxwidth clearf">
+					<p>Copyright © 2014-2018 yunlvkeji.com All Rights Reserved.</p>
+					<p>山西云旅天下科技有限公司</p>
+					<p>晋ICP备17002131号</p>
+				</div>
+			</div>
+		</footer>
+		<!-- 移动端底按钮 -->
+		<section class="footer_btn clearf">
+			<a class="cell_consult" href="tel:0351-5679124">电话咨询</a>
+			<a class="apply_trial applybtn" href="javascript:;">申请试用</a>
+		</section>
+		
+		
+		<!-- 遮罩层 -->
+		<section id="mask"></section>
+		<section id="black"></section>
+		
+		<!-- 申请弹窗 -->
+		<div class="applyBg">
+			<form id="applyForm" action="" method="post">
+				<div class="applyBox">
+					<i class="shut">×</i>
+					<div class="formHead">
+						<h1>云旅 · 旅管系统 · 申请表单</h1>
+						<p>提交审核后，云旅业务人员会尽快联系您，了解您的业务需求</p>
+					</div>
+					<ul class="formCon">
+						<li>
+							<span></span>
+							<p>姓名</p>
+							<input type="text" name="username" placeholder="请输入您的姓名" />
+						</li>
+						<li>
+							<span></span>
+							<p>职位</p>
+							<input type="text" name="place" placeholder="请输入您的职位" />
+						</li>
+						<li>
+							<span></span>
+							<p>机构</p>
+							<input type="text" name="organization" placeholder="请输入您的公司名称或机构名称" />
+						</li>
+						<li>
+							<span></span>
+							<p>手机号</p>
+							<input type="text" name="cellnumber" placeholder="请输入您的手机号" />
+						</li>
+						<li>
+							<span></span>
+							<p>邮箱</p>
+							<input type="text" name="mailbox" placeholder="请输入您的邮箱" />
+						</li>
+					</ul>
+					<div class="formFoot">
+						<button id="applySubmit" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 侧边栏 -->
+		<aside class="toolbar">
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+			   	<span class="toolbar-layer">
+			   		<img src="images/code.jpg" alt="" />
+			   	</span>
+		   	</a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-qq"></a>
+		   	<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</aside>
+		
+		<!-- 产品咨询与反馈 -->
+		<section class="wicket feedback">
+	   		<i class="cha cancel">×</i>
+	   		<span class="feedbackPng"></span>
+	   		<h1>产品咨询与反馈</h1>
+	   		<form id="feedbackForm" action="" method="post">
+		   		<ul class="feedbackTxt">
+		   			<li>
+		   				<span>反馈类别</span>
+		   				<label for="product">
+		   					<input type="radio" name="leibie" id="product" value="产品咨询" checked />
+		   					<i></i>
+		   					<span>产品咨询</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span>反馈类型</span>
+		   				<label for="enterprise">
+		   					<input type="radio" name="genre" id="enterprise" value="企业业务" checked />
+		   					<i></i>
+		   					<span>企业业务</span>
+		   				</label>
+		   				<label for="personal">
+		   					<input type="radio" name="genre" id="personal" value="个人业务" />
+		   					<i></i>
+		   					<span>个人业务</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span class="vtop">反馈内容</span>
+		   				<textarea class="fTextarea" placeholder="欢迎将您遇到的问题或建议反馈给我们" name="content"></textarea>
+		   			</li>
+		   			<li>
+		   				<span>公司名称</span>
+		   				<input class="companyName" type="text" name="comname" id="" value="" placeholder="请输入公司名称"       />
+		   			</li>
+		   			<li>
+		   				<span>联系手机</span>
+		   				<div class="select">
+		   					<select name="zone">
+			   					<option value="+86" selected>中国大陆 +86</option>
+			   					<option value="+852">中国香港 +852</option>
+			   					<option value="+886">中国台湾 +886</option>
+			   					<option value="+853">中国澳门 +853</option>
+			   				</select>
+		   				</div>
+		   				<input class="phone" type="text" name="phonenumber" id="" value="" placeholder="请输入手机号" />
+		   				<i class="hao"></i>
+		   			</li>
+		   			<li>
+		   				<span>验证码</span>
+		   				<input class="test" type="text" name="code" id="" value="" placeholder="请输入验证码" />
+		   				<button id="gain" type="button">发送验证码</button>
+		   			</li>
+		   			<li>
+		   				<div class="cue clearf">
+		   					<span>温馨提示：</span>
+		   					<p>1.反馈会在1个工作日内与您联系（工作时间：<span>周一至周六，8:30-18:00</span>）。<br />2.产品使用过程中遇到的问题，您可以通过与<span>客服联系</span>获得第一时间解答。<br />3.紧急问题建议您拨打400-100-100。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   		<div class="feedbackBtn">
+		   			<button id="submit" type="submit">提交</button>
+		   			<button id="cancel" type="button">取消</button>
+		   		</div>
+	   		</form>
+   	   	</section>
+		
+		<!-- 在线咨询 -->
+	   	<section class="wicket consult">
+	   		<i class="cha close">×</i>
+	   		<span class="consultPng"></span>
+	   		<h1>在线咨询</h1>
+	   		<ul class="consultTxt">
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/sale.png"/></span>
+	   				<span>市场销售</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3105422703&site=qq&menu=yes"><span>商务</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/skill.png"/></span>
+	   				<span>技术支持</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851628746&site=qq&menu=yes"><span>技术</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/adviser.png"/></span>
+	   				<span>售后顾问</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1730648658&site=qq&menu=yes"><span>客服</span></a>
+	   				</div>
+	   			</li>
+	   		</ul>
+	   	</section>
+		<script type="text/javascript">
+			var mySwiper2 = new Swiper ('.huadong', {
+				autoplay: 0,
+				loop: false,
+			    slidesPerView: 4,
+      			slidesPerColumn: 2,
+        		paginationClickable: true,
+			    virtual: true,
+			    // 如果需要分页器
+			    pagination: '.fenye',
+			    
+			    // 如果需要前进后退按钮
+//				nextButton: '.swiper-button-next',
+//				prevButton: '.swiper-button-prev',
+			    
+			    // 如果需要滚动条
+				//	scrollbar: '.swiper-scrollbar',
+			});
+			var mySwiper1 = new Swiper ('.gundong', {
+		        autoplay: {
+		        	delay:0
+		        },//自动滚动
+		        loop: true,//循环
+		        speed: 5000,//滚动速度
+		        freeMode: true,
+		        slidesPerView: 2,
+		        slidesPerGroup: 1
+			});
+			
+			var mSwiper = new Swiper('.computer',{
+			    loop: true,
+			    autoplay: 3000,
+	    		effect: 'fade',
+	    		paginationClickable: true,
+	    		pagination: '.ico_fenye',
+	   		});
+	   		$(".computer").hover(function(){
+				mSwiper.stopAutoplay();
+			},function(){
+				mSwiper.startAutoplay();
+			});
+		</script>
+	</body>
+</html>

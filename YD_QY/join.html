@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”>
+		<title>加入我们</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/easydropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/jquery.easydropdown.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/fontsize.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<style type="text/css">
+			/* banner */
+			.content .banner  {
+				background-image: url("images/banner/banner11.png");
+			}
+			
+			/* 职位 */
+			.jobs_box .jobs_con>div {
+				float: left;
+				margin: 0 1.5%;
+			}
+			.jobs_box .jobs_con .jobs_lookup {
+				width: 34%;
+			}
+			.jobs_box .jobs_con .jobs_lookup h2 {
+				color: #666666;
+				font-size: 20px;
+				line-height: 64px;
+				font-weight: 400;
+				margin-bottom: 16px;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search {
+				position: relative;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search_btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 40px;
+				width: 40px;
+				cursor: pointer;
+				background: url("images/search.png") center/50% no-repeat;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input {
+				width: 100%;
+				padding: 0 2.9em 0 7%;
+				margin-bottom: 16px;
+				color: #999999;
+				font-size: 14px;
+				line-height: 40px;
+				box-sizing: border-box;
+				border: 1px solid #ededed;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input::-moz-placeholder {
+				color: #999999;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input:-moz-placeholder {
+				color: #999999;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input::-ms-input-placeholder {
+				color: #999999;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input::-webkit-input-placeholder {
+				color: #999999;
+			}
+			.jobs_box .jobs_con .jobs_lookup .search input:focus {
+				border-color: #a5c3ec;
+			}
+			.jobs_box .jobs_con .jobs_lookup .dropdown {
+				width: initial;
+				display: block;
+				height: auto;
+				padding: 0 2.9em 0 7%;
+				line-height: 40px;
+				border-color: #ededed;
+			}
+			.jobs_box .jobs_con .jobs_lookup .dropdown.focus {
+				border-color: #a5c3ec;
+			}
+			.jobs_box .jobs_con .jobs_lookup .dropdown .selected {
+				line-height: 40px;
+			}
+			.jobs_box .jobs_con .jobs_lookup .dropdown li {
+				line-height: 30px;
+			}
+			.jobs_box .jobs_con .jobs_lookup .dropdown li.active {
+			    background: #efefef;
+			}
+			.jobs_box .jobs_con .jobs_lookup .prompt {
+				color: #666666;
+				width: 100%;
+				margin-top: 40px;
+				padding: 9%;
+				font-size: 14px;
+				line-height: 30px;
+				box-sizing: border-box;
+				background-color: #f3f2f2;
+			}
+			.jobs_box .jobs_con .jobs_lookup .prompt a {
+				color: #5E81E6;
+			}
+			.jobs_box .jobs_con .jobs_detail {
+				width: 60%;
+			}
+			.jobs_box .jobs_con .jobs_detail table {
+				font-size: 14px;
+				text-align: left;
+				table-layout:fixed;
+				border-collapse: collapse;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr {
+				border-bottom: 1px solid #ededed;
+			}
+			.jobs_box .jobs_con .jobs_detail table tbody tr:not(.details) {
+				height: 70px;
+			}
+			.jobs_box .jobs_con .jobs_detail table thead tr {
+				height: 64px;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details {
+				display: none;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details.show {
+				display: table-row;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr td,
+			.jobs_box .jobs_con .jobs_detail table tr th {
+				padding: 0 2%;
+				font-weight: 400;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				box-sizing: border-box;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr th {
+				font-size: 16px;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr th:nth-child(2) {
+				width: 20%;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr th:nth-child(3) {
+				width: 16%;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr th:nth-child(4) {
+				width: 20%;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr th:nth-child(5) {
+				width: 10%;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr td {
+				position: relative;
+				color: #666666;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr td div.operate {
+				position: absolute;
+				top: 50%;
+				right: 50%;
+				transform: translate(50%,-50%);
+				width: 22px;
+				height: 22px;
+				color: #8c8c8c;
+				cursor: pointer;
+				border-radius: 50%;
+				border: 1px solid #dfdfdf;
+				transition: all linear .2s;
+				transform-origin: 100% 0; 
+				background: url("images/cha.png") no-repeat center/100%;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr td div.operate.open {
+				transform: rotateZ(45deg) translate(50%,-50%);
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details td .details_box {
+				height: 0px;
+				overflow: hidden;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details.show td .details_box {
+				height: auto;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details td .details_box li {
+				padding-top: 40px;
+				line-height: 34px;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details td .details_box li:last-child {
+			    padding-bottom: 40px;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details td .details_box .details_title {
+				color: #333333;
+				margin-bottom: 14px;
+			}
+			.jobs_box .jobs_con .jobs_detail table tr.details td .details_box .details_text {
+				color: #999999;
+				white-space: normal;
+			}
+			.fiery {
+				color: #ffffff;
+				margin-left: 0.2em;
+				padding: 2px 4px;
+				border-radius: 3px;
+				background-color: red;
+				transform: scale(0.8);
+			}
+			
+			/* 自适应 */
+			@media screen and (max-width: 1366px) {
+				.jobs_box .jobs_con .jobs_lookup h2 {
+					font-size: 18px;
+			    	line-height: 60px;
+			     	margin-bottom: 14px;	
+				}
+				.jobs_box .jobs_con .jobs_lookup .search input {
+					font-size: 12px;
+			    	line-height: 34px;
+				}
+				.jobs_box .jobs_con .jobs_lookup .search_btn {
+					height: 34px;
+			    	width: 34px;
+				}
+				.jobs_box .jobs_con .jobs_lookup .dropdown {
+			     	font-size: 12px;
+			     	line-height: 34px;
+				}
+				.jobs_box .jobs_con .jobs_lookup .dropdown .selected {
+					line-height: 34px;
+				}
+				.jobs_box .jobs_con .jobs_lookup .prompt {
+			     	margin-top: 40px;
+			     	font-size: 12px;
+			    	line-height: 26px;
+				}
+				.jobs_box .jobs_con .jobs_detail table {
+					font-size: 12px;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr th {
+					font-size: 14px;
+				}
+				.jobs_box .jobs_con .jobs_detail table thead tr {
+					height: 60px;
+				}
+				.jobs_box .jobs_con .jobs_detail table tbody tr:not(.details) {
+					height: 66px;
+				}
+			}
+			@media screen and (max-width: 750px) {
+				/* 职位 */
+				.content .jobs_box {
+					padding: 0;
+				}
+				.jobs_box .jobs_con>div {
+					float: none;
+					margin: 0;
+				}
+				.jobs_box .jobs_con .jobs_lookup {
+					width: 100%;
+					padding: 0 8%;
+					box-sizing: border-box;
+				}
+				.jobs_box .jobs_con .jobs_lookup h2 {
+					font-size: 1.6rem;
+					line-height: 6.1rem;
+					margin-bottom: 0;
+				}
+				.jobs_box .jobs_con .jobs_lookup .search_btn {
+					height: 3.4rem;
+					width: 3.4rem;
+				}
+				.jobs_box .jobs_con .jobs_lookup .search input {
+					margin-bottom: 1.2rem;
+					font-size: 1.2rem;
+					line-height: 3.4rem;
+				}
+				.jobs_box .jobs_con .jobs_lookup .dropdown,
+				.jobs_box .jobs_con .jobs_lookup .dropdown .selected {
+					line-height: 3.4rem;
+				}
+				.jobs_box .jobs_con .jobs_lookup .dropdown {
+					font-size: 1.2rem;
+				}
+				.dropdown .carat {
+				    transform: translateY(25%);
+				    right: 1rem;
+				}
+				.jobs_box .jobs_con .jobs_lookup .dropdown li {
+					line-height: 3rem;
+				}
+				.jobs_box .jobs_con .jobs_lookup .prompt {
+					margin-top: 0;
+					padding: 1rem 0 2rem;
+					font-size: 1.2rem;
+					line-height: 2.4rem;
+					background-color: #ffffff;
+				}
+				.jobs_box .jobs_con .jobs_detail {
+					width: 100%;
+				}
+				.jobs_box .jobs_con .jobs_detail table {
+					font-size: 1.2rem;
+					margin: 0.6rem 0 1.6rem;
+					border-top: 1px solid #ededed;
+				}
+				.jobs_box .jobs_con .jobs_detail table tbody tr:not(.details) {
+					height: 6.2rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table thead tr {
+					height: 6rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr td,
+				.jobs_box .jobs_con .jobs_detail table tr th {
+					padding: 0 1.5%;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr th {
+					font-size: 1.4rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr th:nth-child(2) {
+					width: 30%;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr th:nth-child(3) {
+					width: 20%;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr th:nth-child(4) {
+					width: 0;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr td div.operate {
+					width: 1.8rem;
+					height: 1.8rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr.details td .details_box li {
+					padding-top: 2rem;
+					line-height: 2.8rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr.details td .details_box li:last-child {
+				    padding-bottom: 2rem;
+				}
+				.jobs_box .jobs_con .jobs_detail table tr.details td .details_box .details_title {
+					margin-bottom: 1.4rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="maxwidth clearf">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo图" />
+					</a>
+				</div>
+				<div class="nav_btn"></div>
+				<ul class="nav clearf">
+					<li>
+						<a href="index.html">首页</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="union.html">云旅联盟</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="mass_innovate.html">众创空间</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="cooperate.html">合作伙伴</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="dynamic.html">云旅动态</a>
+						<i></i>
+					</li>
+					<li class="li_nav active">
+						<a href="javascript:;">了解云旅</a>
+						<i></i>
+						<ul class="nav_c">
+							<li>
+								<a href="introduce.html">公司简介</a>
+							</li>
+							<li>
+								<a href="deeds.html">历史事迹</a>
+							</li>
+							<li>
+								<a href="case.html">客户案例</a>
+							</li>
+							<li>
+								<a href="join.html">加入我们</a>
+							</li>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<div class="headBtn">
+					<button class="login">登录</button>
+					<button class="register">注册</button>
+				</div>-->
+				<div class="cell clearf">
+					<i></i>
+					<span>0351-5679124</span>
+				</div>
+			</div>
+		</header>
+		
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- banner图 -->
+			<section class="banner">
+				<div class="banner_text">
+					<h1>加入我们</h1>
+				</div>
+			</section>
+			
+			<!-- 职位 -->
+			<section class="jobs_box">
+				<div class="maxwidth">
+					<div class="jobs_con clearf">
+						<div class="jobs_lookup">
+							<h2>搜索职位空缺</h2>
+							<div class="search">
+								<input type="text" name="" id="" value="" placeholder="职位关键字"/><span class="search_btn"></span>
+							</div>
+							<select class="dropdown" name="">
+								<option value="">职位分类筛选</option>
+								<option value="">客服</option>
+								<option value="">新媒体</option>
+							</select>
+							<div class="prompt">为确保我们能顺利看到你的作品，简历和作品集需提供PDF或PPT格式文件，并总大小小于10M。 发送至<a href="javascript:;">yangqing@yunlvkeji.com</a></div>
+						</div>
+						<div class="jobs_detail">
+							<table width="100%">
+								<thead>
+									<tr>
+										<th width="">职位名称</th>
+										<th>职位类型</th>
+										<th width="">地点</th>
+										<th width="">更新时间</th>
+										<th width=""></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>JAVA工程师<span class="fiery">热招中</span></td>
+										<td>技术</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、参与软件产品项目规划工作，制定具体项目实施方案；</br>
+														2、跟踪软件开发技术和规范及标准流程的改进；</br>
+														3、参与软件系统的设计和分析；</br>
+														4、根据开发进度和任务分配，完成相应模块软件的设计、开发、编程任务。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、了解java,了解J2EE；</br>
+														2、了解Spring、hibernate等常用Java框架技术；</br>
+														3、了解tomcat,ngnix等web服务器；</br>
+														4、3年及以上使用java开发经验，熟悉Spring、Struts、Ibatis、SOA服务框架等、了解其原理和实现机制；</br>
+														5、熟悉SQL，了解Mysql、Oracle等数据库；</br>
+														6、熟练使用js、html5技术、jquery等前端框架；</br>
+														7、熟悉设计模式；掌握面向对象软件分析、设计方法，并能熟练应用UML及工具进行设计；</br>
+														8、熟悉软件工程、编程规范、有过程控制意识，能够指导初中级人员进行开发和设计工作；</br>
+														9、思路清晰、善于思考、能独立分析和解决问题。有较强的事业心，具有分析、解决应用问题的能力;熟悉微信公众号和微信支付经验者优先。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>产品经理<span class="fiery">热招中</span></td>
+										<td>产品</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、据产品需求，撰写详细的产品流程设计文档、产品界面及原型设计文档；</br>
+														2、负责与研发、设计、测试等部门沟通，确保协作部门对产品文档的有充分的理解；</br>
+														3、引导或参与设计师完成产品的界面设计，协调开发人员进行开发工作，推动及协调产品的开发进度，把控项目质量；</br>
+														4、负责用户研究，收集用户反馈，关注和分析用户需求，对新产品进行调研和规划；</br>
+														5、对产品进行持续的设计优化，提升用户体验，深度挖掘用户需求等。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、技能/能力：</br>
+														（1）良好的逻辑分析能力，热爱互联网产品和服务； </br>
+														（2）对产品分析、数据分析、竞品分析等有独立的见解；</br>
+														（3）优秀的文案撰写能力，熟练掌握常用办公软件等工具。</br>
+														（4）执行能力和协调能力强，抗压能力强；</br>
+														（5）高度的工作责任感，较强的沟通能力，团队精神强。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>行政人资助理</td>
+										<td>行政</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、负责人事行政档案的管理、文书的起草以及公司快递的收发工作等；</br>
+														2、负责协助上级领导处理企业会议或者活动的准备工作，撰写会议纪要；</br>
+														3、负责办公室用品等物品的日常管理工作；</br>
+														4、负责工商手续等办理；</br>
+														5、完成领导交代的其他任务。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、具备一定的行政管理、文档管理知识；</br>
+														2、具备良好的文字功底，能按照领导要求撰写相关文件；</br>
+														3、具备良好的语言表达能力，能与他人进行良好有效的沟通；</br>
+														4、具备计算机操作能力，能熟练使用办公室软件；</br>
+														5、工作认真负责，积极主动。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>会计</td>
+										<td>财务</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、熟悉掌握财务制度、会计制度和有关法规；</br>
+														2、按照会计制度，严格操作记账凭证，做到凭证合法、数据准确、手续完备;账目健全、及时记账算账、按时结账、如期报账、定期对账。保证所提供的会计信息合法、真实、准确、及时、完整。及时清理往来款项；</br>
+														3、严格票据管理，妥善保管会计凭证、会计账簿、财务会计报表和其他会计资料；</br>
+														4、配合主管部门和审计、财政、税务等部门依照法律和有关规定进行的监督核查。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、有丰富做账经验、有融资相关经验者优先考虑，发展前景好，薪资面议。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>客服运营专员</td>
+										<td>客服</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、服从上级领导，按规定的程序与标准向客人提供客服服务；</br>
+														2、高效、恰当解答客户问题。</br>
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、口齿清楚，优秀的语言表达能力和沟通能力；</br>
+														2、熟练使用网络交流工具和各种办公软件。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>商务专员</td>
+										<td>销售</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、推广普及云旅系统。</br>
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、1年及以上商务销售相关工作经验； </br>
+														2、较强沟通能力。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>新媒体运营总监</td>
+										<td>新媒体</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、网络媒体信息推广，包括企业新间事件、行业相关信息等内容的发布传播;</br>
+														2、目主网络媒介平台的开发与维护，运作企业新媒体如微店、官方网站、微信平台等，确保人气的提升;</br>
+														3、根据上级方针，创意地开展微博、微信上的活动;</br>
+														4、根据公司品牌策路，结合微店、官方网站、微信平台等的特性，寻能引起传播的话题，引起客户互动，包括操作其他官方新媒体的联合推广等。</br>
+														5、与公司其他部］沟通配合，搜集汇总客户的意见反和批评建议，及时反馈给相关部门负责人，了解客户需求并挖掘需求，掌握行业内的最新资讯，提供有质量的内容。</br>
+														6、定期收集整理运营数据反馈给相关部门负责。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、热爱互联网，对微博、SNS、博客、论坛等产品有浓厚兴趣或深刻认识，并且善于把握用户的各层次需求。</br>
+														2、大专及以上学历。</br>
+														3、具备良好文案撰写能力。</br>
+														4、公众号运营经验的优先考虑。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>市场部经理</td>
+										<td>管理人员</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、负责商务、客服的全面管理；</br>
+														2、协助总经理推动云旅系统在旅游行业的普及。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、具备组织、协调能力； </br>
+														2、有商务开拓经验。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>储备干部</td>
+										<td>其他</td>
+										<td>太原</td>
+										<td>2019-03-20</td>
+										<td>
+											<div class="operate"></div>
+										</td>
+									</tr>
+									<tr class="details">
+										<td colspan="5">
+											<ul class="details_box">
+												<li>
+													<h3 class="details_title">岗位职责：</h3>
+													<div class="details_text">
+														1、公司会有完善的新员工成长计划，包括培训、个人成长等多方面的培育，最终目标成长为区域总经理（应届毕业生优先）。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">任职要求：</h3>
+													<div class="details_text">
+														1、具备组织、协调能力； </br>
+														2、有商务开拓经验。
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">工作地点：</h3>
+													<div class="details_text">
+														山西省太原市高新区南内环街清控创新基地D座20层
+													</div>
+												</li>
+												<li>
+													<h3 class="details_title">我们的优势：</h3>
+													<div class="details_text">
+														1、提供五险、双休、带薪年假；</br>
+														2、健全的薪酬福利制度；</br>
+														3、高大上的办公环境；</br>
+														4、专业的培训机会；</br>
+														5、专业和管理双向晋升通道；</br>
+														6、每年多次调薪；</br>
+														7、公司发展前景好，项目极具潜力。
+													</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<!-- 尾部 -->
+		<footer>
+			<div class="maxwidth">
+				<div class="nav-block clearf">
+					<ul>
+						<li>
+							<h4>云旅</h4>
+							<p>Yunlv</p>
+						</li>
+						<li>
+							<p><a href="union.html">云旅联盟</a></p>
+						</li>
+						<li>
+							<p><a href="mass_innovate.html">众创空间</a></p>
+						</li>
+						<li>
+							<p><a href="cooperate.html">合作伙伴</a></p>
+						</li>
+						<li>
+							<p><a href="dynamic.html">云旅动态</a></p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>关于</h4>
+							<p>About</p>
+						</li>
+						<li>
+							<p><a href="introduce.html">公司简介</a></p>
+						</li>
+						<li>
+							<p><a href="deeds.html">历史事迹</a></p>
+						</li>
+						<li>
+							<p><a href="case.html">客户案例</a></p>
+						</li>
+						<li>
+							<p><a href="join.html">加入我们</a></p>
+						</li>
+						<li>
+							<p><a href="contact.html">联系我们</a></p>
+							
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>商务合作</h4>
+							<p>Business</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679124</p>
+						</li>
+						<li>
+							<p>客服邮箱：zhaoliming@yunlvkeji.com</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<h4>联系我们</h4>
+							<p>Conntacts</p>
+						</li>
+						<li>
+							<p>公司地址：山西省太原市南内环街清控创新基地D座20层</p>
+						</li>
+						<li>
+							<p>邮箱：yangqing@yunlvkeji.com</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679128</p>
+						</li>
+						<li>
+							<p class="public_num">
+								关注云旅公众号
+								<i>
+									<span>
+										<img src="images/code.jpg"/>
+									</span>
+								</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile_footer">
+					<dl class="about_us">
+						<dt>了解云旅</dt>
+							<dd><a href="introduce.html">公司简介</a></dd>
+							<dd><a href="deeds.html">历史事迹</a></dd>
+							<dd><a href="case.html">客户案例</a></dd>
+							<dd><a href="join.html">加入我们</a></dd>
+							<dd><a href="contact.html">联系我们</a></dd>
+					</dl>
+					<div class="contact_us">
+						<ul>
+							<li>商务合作：0351-5679124</li>
+							<li>客服邮箱：zhaoliming@yunlvkeji.com</li>
+							<li>业务咨询：0351-5679128</li>
+						</ul>
+						<div class="code">
+							<img src="images/code.jpg" alt="" />
+							<p>关注云旅公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="maxwidth clearf">
+					<p>Copyright © 2014-2018 yunlvkeji.com All Rights Reserved.</p>
+					<p>山西云旅天下科技有限公司</p>
+					<p>晋ICP备17002131号</p>
+				</div>
+			</div>
+		</footer>
+		<!-- 移动端底按钮 -->
+		<section class="footer_btn clearf">
+			<a class="cell_consult" href="tel:0351-5679124">电话咨询</a>
+			<a class="apply_trial applybtn" href="javascript:;">申请试用</a>
+		</section>
+		
+		
+		<!-- 遮罩层 -->
+		<section id="mask"></section>
+		<section id="black"></section>
+		
+		<!-- 申请弹窗 -->
+		<div class="applyBg">
+			<form id="applyForm" action="" method="post">
+				<div class="applyBox">
+					<i class="shut">×</i>
+					<div class="formHead">
+						<h1>云旅 · 旅管系统 · 申请表单</h1>
+						<p>提交审核后，云旅业务人员会尽快联系您，了解您的业务需求</p>
+					</div>
+					<ul class="formCon">
+						<li>
+							<span></span>
+							<p>姓名</p>
+							<input type="text" name="username" placeholder="请输入您的姓名" />
+						</li>
+						<li>
+							<span></span>
+							<p>职位</p>
+							<input type="text" name="place" placeholder="请输入您的职位" />
+						</li>
+						<li>
+							<span></span>
+							<p>机构</p>
+							<input type="text" name="organization" placeholder="请输入您的公司名称或机构名称" />
+						</li>
+						<li>
+							<span></span>
+							<p>手机号</p>
+							<input type="text" name="cellnumber" placeholder="请输入您的手机号" />
+						</li>
+						<li>
+							<span></span>
+							<p>邮箱</p>
+							<input type="text" name="mailbox" placeholder="请输入您的邮箱" />
+						</li>
+					</ul>
+					<div class="formFoot">
+						<button id="applySubmit" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 侧边栏 -->
+		<aside class="toolbar">
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+			   	<span class="toolbar-layer">
+			   		<img src="images/code.jpg" alt="" />
+			   	</span>
+		   	</a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-qq"></a>
+		   	<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</aside>
+		
+		<!-- 产品咨询与反馈 -->
+		<section class="wicket feedback">
+	   		<i class="cha cancel">×</i>
+	   		<span class="feedbackPng"></span>
+	   		<h1>产品咨询与反馈</h1>
+	   		<form id="feedbackForm" action="" method="post">
+		   		<ul class="feedbackTxt">
+		   			<li>
+		   				<span>反馈类别</span>
+		   				<label for="product">
+		   					<input type="radio" name="leibie" id="product" value="产品咨询" checked />
+		   					<i></i>
+		   					<span>产品咨询</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span>反馈类型</span>
+		   				<label for="enterprise">
+		   					<input type="radio" name="genre" id="enterprise" value="企业业务" checked />
+		   					<i></i>
+		   					<span>企业业务</span>
+		   				</label>
+		   				<label for="personal">
+		   					<input type="radio" name="genre" id="personal" value="个人业务" />
+		   					<i></i>
+		   					<span>个人业务</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span class="vtop">反馈内容</span>
+		   				<textarea class="fTextarea" placeholder="欢迎将您遇到的问题或建议反馈给我们" name="content"></textarea>
+		   			</li>
+		   			<li>
+		   				<span>公司名称</span>
+		   				<input class="companyName" type="text" name="comname" id="" value="" placeholder="请输入公司名称"       />
+		   			</li>
+		   			<li>
+		   				<span>联系手机</span>
+		   				<div class="select">
+		   					<select name="zone">
+			   					<option value="+86" selected>中国大陆 +86</option>
+			   					<option value="+852">中国香港 +852</option>
+			   					<option value="+886">中国台湾 +886</option>
+			   					<option value="+853">中国澳门 +853</option>
+			   				</select>
+		   				</div>
+		   				<input class="phone" type="text" name="phonenumber" id="" value="" placeholder="请输入手机号" />
+		   				<i class="hao"></i>
+		   			</li>
+		   			<li>
+		   				<span>验证码</span>
+		   				<input class="test" type="text" name="code" id="" value="" placeholder="请输入验证码" />
+		   				<button id="gain" type="button">发送验证码</button>
+		   			</li>
+		   			<li>
+		   				<div class="cue clearf">
+		   					<span>温馨提示：</span>
+		   					<p>1.反馈会在1个工作日内与您联系（工作时间：<span>周一至周六，8:30-18:00</span>）。<br />2.产品使用过程中遇到的问题，您可以通过与<span>客服联系</span>获得第一时间解答。<br />3.紧急问题建议您拨打400-100-100。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   		<div class="feedbackBtn">
+		   			<button id="submit" type="submit">提交</button>
+		   			<button id="cancel" type="button">取消</button>
+		   		</div>
+	   		</form>
+   	   	</section>
+		
+		<!-- 在线咨询 -->
+	   	<section class="wicket consult">
+	   		<i class="cha close">×</i>
+	   		<span class="consultPng"></span>
+	   		<h1>在线咨询</h1>
+	   		<ul class="consultTxt">
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/sale.png"/></span>
+	   				<span>市场销售</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3105422703&site=qq&menu=yes"><span>商务</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/skill.png"/></span>
+	   				<span>技术支持</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851628746&site=qq&menu=yes"><span>技术</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/adviser.png"/></span>
+	   				<span>售后顾问</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1730648658&site=qq&menu=yes"><span>客服</span></a>
+	   				</div>
+	   			</li>
+	   		</ul>
+	   	</section>
+		<script type="text/javascript">
+			$(".operate").click(function(){
+				$(this).toggleClass("open").parents("tr").next(".details").toggleClass("show");
+				var index=$(".open").index($(this));
+				$(".open").each(function(x,even){
+					if(index!=x){
+						$(this).removeClass("open");
+						$(this).parents("tr").next(".details").toggleClass("show");
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

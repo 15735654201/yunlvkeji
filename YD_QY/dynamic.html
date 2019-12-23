@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”>
+		<title>云旅动态</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fontsize.js"></script>
+		<script src="js/pagination.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<style type="text/css">
+			/* banner */
+			.content .banner {
+				background-image: url("images/banner/banner07.png");
+			}
+			
+			/* 内容选项卡 */
+			.content .page_nav .nav_con li {
+				line-height: 70px;
+			}
+			.content .page_nav .nav_con li:first-child {
+				margin-left: 20%;
+			}
+			.content .page_nav .nav_con li:last-child {
+				margin-right: 20%;
+			}
+			.content .page_nav .nav_con li a {
+				border-bottom: 4px solid transparent;
+			}
+			.content .page_nav .nav_con li.active a {
+				border-color: #5e81e6;
+			}
+			
+			/*选项卡内容*/
+			.tabs_con .tabs_box .tabs_li {
+				display: none;
+			}
+			.tabs_con .tabs_box .tabs_li.selected {
+				display: block;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box {
+				margin: 28px 0 ;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list {
+				width: 83%;
+				margin: 0 auto 44px;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li {
+				padding: 32px 0;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li+li {
+				border-top: 1px solid #efefef;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time {
+				width: 110px;
+				padding-right: 14px;
+				float: left;
+				color: #999999;
+				text-align: right;
+				box-sizing: border-box;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time .con_date {
+				font-size: 34px;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time .con_year {
+				font-size: 18px;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text {
+				margin-left: 110px;
+				padding-left: 2%;
+				box-sizing: border-box;
+				border-left: 1px solid #efefef;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text a {
+				max-width: 100%;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text h4 {
+				font-size: 20px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin-bottom: 10px;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text a:hover h4 {
+				color: #5e81e6;
+			}
+			.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text p {
+				color: #999999;
+				font-size: 14px;
+				line-height: 26px;
+			}
+			
+			/* 自适应 */
+			@media screen and (max-width: 1366px) {
+				.content .page_nav .nav_con li {
+					line-height: 61px;
+				}
+				.content .page_nav .nav_con li a {
+					border-bottom-width: 3px;
+				}
+			}
+			@media screen and (max-width: 750px) {
+				.content .page_nav {
+					display: block;
+					font-size: 1.6rem;
+				}
+				.content .page_nav .nav_con {
+					width: 100%;
+				}
+				.content .page_nav .nav_con li {
+					width: 24%;
+				}
+				.content .page_nav .nav_con li:first-child {
+					margin-left: 14%;
+				}
+				.content .page_nav .nav_con li:last-child {
+					margin-right: 14%;
+				}
+				.content .page_nav .nav_con li+li:after {
+					width: 0.4rem;
+					height: 0.4rem;
+					margin-top: -3px;
+				}
+				.content .page_nav .nav_con li {
+				    line-height: 3.9rem;
+				}
+				/*选项卡内容*/
+				.tabs_con .tabs_box .tabs_li .con_box {
+					margin: 1.5rem 0 0;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list {
+					width: 100%;
+					margin: 0 auto;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li {
+					padding: 1.5rem 0;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li:last-child {
+					padding-bottom: 0;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time {
+					width: 6.5rem;
+					padding-right: 1rem;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time .con_date {
+					font-size: 2.2rem;
+					font-weight: normal;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_time .con_year {
+					font-size: 1.2rem;
+					font-weight: normal;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text {
+					margin-left: 6.5rem;
+					padding-left: 1rem;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text h4 {
+					font-size: 1.5rem;
+					margin-bottom: 0.7rem;
+				}
+				.tabs_con .tabs_box .tabs_li .con_box .con_list li .con_text p {
+					color: #999999;
+					font-size: 14px;
+					line-height: 26px;
+					display: -webkit-box;
+		            -webkit-box-orient: vertical;
+		            overflow: hidden;
+		            text-overflow: ellipsis;
+		            word-break: break-all;
+		            -webkit-line-clamp:3;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="maxwidth clearf">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo图" />
+					</a>
+				</div>
+				<div class="nav_btn"></div>
+				<ul class="nav clearf">
+					<li>
+						<a href="index.html">首页</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="union.html">云旅联盟</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="mass_innovate.html">众创空间</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="cooperate.html">合作伙伴</a>
+						<i></i>
+					</li>
+					<li class="active">
+						<a href="dynamic.html">云旅动态</a>
+						<i></i>
+					</li>
+					<li class="li_nav">
+						<a href="javascript:;">了解云旅</a>
+						<i></i>
+						<ul class="nav_c">
+							<li>
+								<a href="introduce.html">公司简介</a>
+							</li>
+							<li>
+								<a href="deeds.html">历史事迹</a>
+							</li>
+							<li>
+								<a href="case.html">客户案例</a>
+							</li>
+							<li>
+								<a href="join.html">加入我们</a>
+							</li>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<div class="headBtn">
+					<button class="login">登录</button>
+					<button class="register">注册</button>
+				</div>-->
+				<div class="cell clearf">
+					<i></i>
+					<span>0351-5679124</span>
+				</div>
+			</div>
+		</header>
+		
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- banner图 -->
+			<section class="banner">
+				<div class="banner_text">
+					<h1>云旅动态</h1>
+				</div>
+			</section>
+			
+			<!-- 内容导航 -->
+			<section class="page_nav">
+				<ul class="nav_con clearf">
+					<li><a href="javascript:;">产品动态</a></li>
+					<li><a href="javascript:;">云旅活动</a></li>
+					<li class="active"><a href="javascript:;">新闻报道</a></li>
+				</ul>
+			</section>
+			
+			<!-- 选项卡内容 -->
+			<section class="tabs_con">
+				<div class="maxwidth">
+					<ul class="tabs_box">
+						<li class="tabs_li">
+							<div class="title3">
+								<div class="title_img">
+									<img src="images/yunlv.png" alt="" />
+								</div>
+								<h2>产品动态</h2>
+							</div>
+							<div class="con_box">
+								<ul class="con_list">
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">07.11</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/_hlQ1CGw1a2RSON7SBUSdA">
+												<h4>集合地点功能使用说明</h4>
+												<p>“为了方便各家旅行社发团时对游客的管理，云旅平台新增集合地点统计功能，方便大家实际业务使用。”</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">07.11</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/5eyrC65BANXuzIMCkdMy4Q">
+												<h4>选座功能使用说明</h4>
+												<p>“为了方便各家旅行社游客游客报名选座，云旅平台新增选座功能，方便大家在做业务时使用。”</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">07.10</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/eiwlehjfrEvY_4Hi-umWeA">
+												<h4>云旅智能管理系统-集合地点功能介绍</h4>
+												<p>经过程序猿不断的敲击和打磨，云旅智能管理系统的集合地点功能即将上线，炎炎夏日，将为旅行社和游客带来一缕清新、众多福利。</p>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="pagination" id="pagination"></div>
+							</div>
+						</li>
+						<li class="tabs_li">
+							<div class="title3">
+								<div class="title_img">
+									<img src="images/yunlv.png" alt="" />
+								</div>
+								<h2>云旅活动</h2>
+							</div>
+							<div class="con_box">
+								<ul class="con_list">
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">03.08</h3>
+											<h4 class="con_year">2019</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/Cw4WMU_4Tqyk0aeoqcqnYA">
+												<h4>女神节~从今以后的路，为自己而走</h4>
+												<p>在这个充满热情的三月专属女神们的节日终于来了所谓旅游，就是带着一份心情，去邂逅一份新鲜。你看过的风景都是你的三八“女神节”一个特殊的日子许自己一场说走就走的旅行~~</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">02.19</h3>
+											<h4 class="con_year">2019</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/TfllwN026nBEQYm4N0bFSQ">
+												<h4>元宵佳节猜灯谜</h4>
+												<p>“谁家见月能闲坐，何处闻灯不看来。”元宵节临近，元宵、花灯、鞭炮将我们带入了热闹的节日氛围。你的家乡都有哪些元宵节习俗呢？另外，文末还有元宵灯谜，想不想挑战一下？</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">02.04</h3>
+											<h4 class="con_year">2019</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/kSeLJA94cawGnLXYMAxxhA">
+												<h4>山西云旅天下网络科技有限公司全体工作人员给大家拜年啦~</h4>
+												<p>在这个阖家团圆的时刻中国云旅天下旅游产业联盟秘书处全体成员山西云旅天下网络科技有限公司全体工作人员给大家拜年啦~祝大家“猪”事顺利！猪年吉祥！猪年好运！</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">07.09</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/FoOZ2c89kWHHY0tyGNUxUw">
+												<h4>【红火8月】云旅联盟优势线路共享中</h4>
+												<p>为了增进云旅联盟各旅行社之间优质线路资源的共享，拓宽旅行社收客途径，云旅联盟特推出【红火8月】云旅联盟优势地接线路共享专题活动。</p>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="pagination" id="pagination"></div>
+							</div>
+						</li>
+						<li class="tabs_li selected">
+							<div class="title3">
+								<div class="title_img">
+									<img src="images/yunlv.png" alt="" />
+								</div>
+								<h2>新闻报道</h2>
+							</div>
+							<div class="con_box">
+								<ul class="con_list">
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">02.14</h3>
+											<h4 class="con_year">2019</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/nMXhz1no6g5axZmK7LWzcg">
+												<h4>山西省文化旅游厅厅长盛佃清正月初九深入基层，调研云旅天下网络科技!</h4>
+												<p>2019年2月13日，农历正月初九，山西省文化旅游厅厅长盛佃清率省文旅厅科技教育处处长吴雪陶、省文旅厅产业发展处处长赵军龙、省文旅厅资源开发处处长师振亚一行，就四季风旅游、云旅天下科技发展模式进行深入调研。</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">07.07</h3>
+											<h4 class="con_year">2018</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/18m9xJkqK-yXp2Z2TwNU7w">
+												<h4>省发改委尚日红主任、中科院张文忠主任等一行调研考察</h4>
+												<p>7月7日，山西省发改委尚日红主任、中国科学院张文忠主任、省市发改委经信委等一行领导莅临山西云旅天下网络科技有限公司调研，此次调研主题是以科技创新大数据平台进行详细考察。云旅天下科技公司董事长乔海燕就云旅天下旅游大数据平台进行了详细汇报。</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">09.29</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/sCfrKpOOTlYKaCr6Bc8OmQ">
+												<h4>国家科技部火炬中心主任安道昌一行莅临云旅科技调研考察</h4>
+												<p>9月28日，国家科技部火炬中心主任安道昌一行莅临山西云旅天下网络科技有限公司调研考察，同时参观了四季风旅游集团。考察过程中，云旅科技董事长乔海燕女士向安主任介绍了公司的发展现状和产品，安主任大力赞赏并指示云旅科把平台推广到了全国，帮助更多旅行社提升旅游品质。</p>
+											</a>
+										</div>
+									</li>
+									<li class="clearf">
+										<div class="con_time">
+											<h3 class="con_date">08.03</h3>
+											<h4 class="con_year">2017</h4>
+										</div>
+										<div class="con_text">
+											<a target="_blank" href="https://mp.weixin.qq.com/s/_tFUMs1hI_G7ulJB2F5VbQ">
+												<h4>董事长乔海燕：智慧互联开启文旅新时代</h4>
+												<p>8月2日，第二届山西省互联网大会在太原召开，工业和信息化部信息通信管理局副局长隋静和省委部分领导出席会议。大会以“新思维 新融合 新经济”为主题，围绕山西互联网发展趋势，搭建政府政策引导、企业交流、技术引领、创业分享的平台，推进全省互联网行业和传统产业的融合升级。</p>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="pagination" id="pagination"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		
+		<!-- 尾部 -->
+		<footer>
+			<div class="maxwidth">
+				<div class="nav-block clearf">
+					<ul>
+						<li>
+							<h4>云旅</h4>
+							<p>Yunlv</p>
+						</li>
+						<li>
+							<p><a href="union.html">云旅联盟</a></p>
+						</li>
+						<li>
+							<p><a href="mass_innovate.html">众创空间</a></p>
+						</li>
+						<li>
+							<p><a href="cooperate.html">合作伙伴</a></p>
+						</li>
+						<li>
+							<p><a href="dynamic.html">云旅动态</a></p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>关于</h4>
+							<p>About</p>
+						</li>
+						<li>
+							<p><a href="introduce.html">公司简介</a></p>
+						</li>
+						<li>
+							<p><a href="deeds.html">历史事迹</a></p>
+						</li>
+						<li>
+							<p><a href="case.html">客户案例</a></p>
+						</li>
+						<li>
+							<p><a href="join.html">加入我们</a></p>
+						</li>
+						<li>
+							<p><a href="contact.html">联系我们</a></p>
+							
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>商务合作</h4>
+							<p>Business</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679124</p>
+						</li>
+						<li>
+							<p>客服邮箱：zhaoliming@yunlvkeji.com</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<h4>联系我们</h4>
+							<p>Conntacts</p>
+						</li>
+						<li>
+							<p>公司地址：山西省太原市南内环街清控创新基地D座20层</p>
+						</li>
+						<li>
+							<p>邮箱：yangqing@yunlvkeji.com</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679128</p>
+						</li>
+						<li>
+							<p class="public_num">
+								关注云旅公众号
+								<i>
+									<span>
+										<img src="images/code.jpg"/>
+									</span>
+								</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile_footer">
+					<dl class="about_us">
+						<dt>了解云旅</dt>
+							<dd><a href="introduce.html">公司简介</a></dd>
+							<dd><a href="deeds.html">历史事迹</a></dd>
+							<dd><a href="case.html">客户案例</a></dd>
+							<dd><a href="join.html">加入我们</a></dd>
+							<dd><a href="contact.html">联系我们</a></dd>
+					</dl>
+					<div class="contact_us">
+						<ul>
+							<li>商务合作：0351-5679124</li>
+							<li>客服邮箱：zhaoliming@yunlvkeji.com</li>
+							<li>业务咨询：0351-5679128</li>
+						</ul>
+						<div class="code">
+							<img src="images/code.jpg" alt="" />
+							<p>关注云旅公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="maxwidth clearf">
+					<p>Copyright © 2014-2018 yunlvkeji.com All Rights Reserved.</p>
+					<p>山西云旅天下科技有限公司</p>
+					<p>晋ICP备17002131号</p>
+				</div>
+			</div>
+		</footer>
+		<!-- 移动端底按钮 -->
+		<section class="footer_btn clearf">
+			<a class="cell_consult" href="tel:0351-5679124">电话咨询</a>
+			<a class="apply_trial applybtn" href="javascript:;">申请试用</a>
+		</section>
+		
+		
+		<!-- 遮罩层 -->
+		<section id="mask"></section>
+		<section id="black"></section>
+		
+		<!-- 申请弹窗 -->
+		<div class="applyBg">
+			<form id="applyForm" action="" method="post">
+				<div class="applyBox">
+					<i class="shut">×</i>
+					<div class="formHead">
+						<h1>云旅 · 旅管系统 · 申请表单</h1>
+						<p>提交审核后，云旅业务人员会尽快联系您，了解您的业务需求</p>
+					</div>
+					<ul class="formCon">
+						<li>
+							<span></span>
+							<p>姓名</p>
+							<input type="text" name="username" placeholder="请输入您的姓名" />
+						</li>
+						<li>
+							<span></span>
+							<p>职位</p>
+							<input type="text" name="place" placeholder="请输入您的职位" />
+						</li>
+						<li>
+							<span></span>
+							<p>机构</p>
+							<input type="text" name="organization" placeholder="请输入您的公司名称或机构名称" />
+						</li>
+						<li>
+							<span></span>
+							<p>手机号</p>
+							<input type="text" name="cellnumber" placeholder="请输入您的手机号" />
+						</li>
+						<li>
+							<span></span>
+							<p>邮箱</p>
+							<input type="text" name="mailbox" placeholder="请输入您的邮箱" />
+						</li>
+					</ul>
+					<div class="formFoot">
+						<button id="applySubmit" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 侧边栏 -->
+		<aside class="toolbar">
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+			   	<span class="toolbar-layer">
+			   		<img src="images/code.jpg" alt="" />
+			   	</span>
+		   	</a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-qq"></a>
+		   	<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</aside>
+		
+		<!-- 产品咨询与反馈 -->
+		<section class="wicket feedback">
+	   		<i class="cha cancel">×</i>
+	   		<span class="feedbackPng"></span>
+	   		<h1>产品咨询与反馈</h1>
+	   		<form id="feedbackForm" action="" method="post">
+		   		<ul class="feedbackTxt">
+		   			<li>
+		   				<span>反馈类别</span>
+		   				<label for="product">
+		   					<input type="radio" name="leibie" id="product" value="产品咨询" checked />
+		   					<i></i>
+		   					<span>产品咨询</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span>反馈类型</span>
+		   				<label for="enterprise">
+		   					<input type="radio" name="genre" id="enterprise" value="企业业务" checked />
+		   					<i></i>
+		   					<span>企业业务</span>
+		   				</label>
+		   				<label for="personal">
+		   					<input type="radio" name="genre" id="personal" value="个人业务" />
+		   					<i></i>
+		   					<span>个人业务</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span class="vtop">反馈内容</span>
+		   				<textarea class="fTextarea" placeholder="欢迎将您遇到的问题或建议反馈给我们" name="content"></textarea>
+		   			</li>
+		   			<li>
+		   				<span>公司名称</span>
+		   				<input class="companyName" type="text" name="comname" id="" value="" placeholder="请输入公司名称"       />
+		   			</li>
+		   			<li>
+		   				<span>联系手机</span>
+		   				<div class="select">
+		   					<select name="zone">
+			   					<option value="+86" selected>中国大陆 +86</option>
+			   					<option value="+852">中国香港 +852</option>
+			   					<option value="+886">中国台湾 +886</option>
+			   					<option value="+853">中国澳门 +853</option>
+			   				</select>
+		   				</div>
+		   				<input class="phone" type="text" name="phonenumber" id="" value="" placeholder="请输入手机号" />
+		   				<i class="hao"></i>
+		   			</li>
+		   			<li>
+		   				<span>验证码</span>
+		   				<input class="test" type="text" name="code" id="" value="" placeholder="请输入验证码" />
+		   				<button id="gain" type="button">发送验证码</button>
+		   			</li>
+		   			<li>
+		   				<div class="cue clearf">
+		   					<span>温馨提示：</span>
+		   					<p>1.反馈会在1个工作日内与您联系（工作时间：<span>周一至周六，8:30-18:00</span>）。<br />2.产品使用过程中遇到的问题，您可以通过与<span>客服联系</span>获得第一时间解答。<br />3.紧急问题建议您拨打400-100-100。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   		<div class="feedbackBtn">
+		   			<button id="submit" type="submit">提交</button>
+		   			<button id="cancel" type="button">取消</button>
+		   		</div>
+	   		</form>
+   	   	</section>
+		
+		<!-- 在线咨询 -->
+	   	<section class="wicket consult">
+	   		<i class="cha close">×</i>
+	   		<span class="consultPng"></span>
+	   		<h1>在线咨询</h1>
+	   		<ul class="consultTxt">
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/sale.png"/></span>
+	   				<span>市场销售</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3105422703&site=qq&menu=yes"><span>商务</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/skill.png"/></span>
+	   				<span>技术支持</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851628746&site=qq&menu=yes"><span>技术</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/adviser.png"/></span>
+	   				<span>售后顾问</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1730648658&site=qq&menu=yes"><span>客服</span></a>
+	   				</div>
+	   			</li>
+	   		</ul>
+	   	</section>
+		<script type="text/javascript">
+			//内容选项卡
+			$(".nav_con").children("li").click(function() {
+		        var n=$(this).index();
+		        $(this).addClass("active");
+		        $(this).siblings().removeClass("active");
+		        $(".tabs_box").children("li").eq(n).addClass("selected").siblings().removeClass("selected");
+		    });
+		    
+		    function loadData(currPage, pageSize) {
+				$.ajax({
+				    //其它参数选项请自填
+				    success: function(res) {
+				      //处理数据
+				      //设置分页插件显示
+				      $("#pagination").whjPaging("setPage", {currPage: res.currPage, totalPage: res.totalPage, totalSize: res.totalSize});
+				    }
+				});
+			}
+		    
+		    $("#pagination").whjPaging({
+		    	isResetPage: true,
+				previousPage: "<<上一页",
+				nextPage: "下一页>>",
+	            totalPage: 18,
+	            isShowTotalSize: false,
+	            isShowPageSizeOpt: false,
+	            isShowRefresh: false,
+	            isShowFL: false,
+	            callBack: function(currPage, pageSize) {
+					loadData(currPage, pageSize);
+				}
+	     	});
+
+			loadData(1, 5);
+		</script>
+	</body>
+</html>

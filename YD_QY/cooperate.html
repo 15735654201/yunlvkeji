@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”>
+		<title>合作伙伴</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fontsize.js"></script>
+		<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<style type="text/css">
+			/* banner */
+			.content .banner {
+				background-image: url("images/banner/banner06.png");
+			}
+			
+			/* 云旅优势 */
+			.advantage {
+				border-bottom: 1px solid #d6d6d6;
+			}
+			.advantage .advantage_box li {
+				float: left;
+				width: 25%;
+				padding: 0 1.3%;
+				box-sizing: border-box;
+			}
+			.advantage .advantage_box li div {
+				margin-bottom: 8px;
+				overflow: hidden;
+				border: 1px solid #dfdfdf;
+			}
+			.advantage .advantage_box li img {
+				float: left;
+				width: 100%;
+			}
+			.advantage .advantage_box li h4 {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 54px;
+			}
+			.advantage .advantage_box li p {
+				color: #999999;
+				font-size: 16px;
+				line-height: 30px;
+			}
+			
+			/* 合作模式 */
+			.content .partner {
+				padding-top: 0;
+			}
+			.pattern .pattern_box .pattern_nav {
+				text-align: center;
+			}
+			.pattern .pattern_box .pattern_nav li {
+				display: inline-block;
+				margin: 0 20px;
+				font-size: 16px;
+				line-height: 40px;
+				cursor: pointer;
+				border-bottom: 2px solid transparent;
+			}
+			.pattern .pattern_box .pattern_nav li.active {
+				border-color: #63a2ff;
+			}
+			.pattern .pattern_box .pattern_con {
+				margin-top: 54px;
+			}
+			.pattern .pattern_box .pattern_con li:not(:first-child) {
+				display: none;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div {
+				height: 60px;
+				padding: 30px 0;
+				margin-top: 16px;
+				border: 1px solid #d9d9d9;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div span {	
+				float: left;
+				width: 12%;
+				height: 60px;
+				text-align: center;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div span img {
+				height: 100%;
+			}	
+			.pattern .pattern_box .pattern_con li .pattern_div .pattern_text {
+				color: #666666;
+				float: left;
+				width: 88%;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt {
+				float: left;
+				width: 72%;
+				padding-right: 5%;
+				box-sizing: border-box;
+				border-right: 1px solid #d6d6d6;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt h4 {
+				font-size: 18px;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt p {
+				margin-top: 18px;
+				font-size: 16px;
+				line-height: 18px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_btn {
+				float: right;
+				padding: 13px 0;
+				width: 28%;
+				text-align: center;
+			}
+			.pattern .pattern_box .pattern_con li .pattern_div  .pattern_text .pattern_btn button {
+				font-size: 16px;
+			}
+			
+			/* 合作流程 */
+			.flow .flow_box ul {
+				margin: 0 10%;
+			}
+			.content .flow .flow_box ul li {
+				width: 25%;
+			}
+			
+			/* 合作伙伴 */
+			.partner .partner_box .partner_lunbo li:nth-child(2n) {
+				margin-top: 0.9%!important;
+			}
+			.partner .partner_box .partner_lunbo li div {
+				margin: 0 7.5%;
+				text-align: center;
+				padding: 0 8%;
+				border: 1px solid #d9d9d9;
+			}
+			.partner .partner_box {
+				position: relative;
+				padding-bottom: 70px;
+			}
+			.partner .partner_box .fenye {
+			    bottom: 0;
+			    left: 50%;
+			    transform: translateX(-50%);
+			}
+			.partner .partner_box .fenye span {
+			    width: 14px;
+			    height: 14px;
+			    margin: 0 7px;
+			    cursor: pointer;
+			}
+			
+			/* 自适应 */
+			@media screen and (max-width: 1366px) {
+				/* 云旅优势 */
+				.advantage .advantage_box li div {
+				    margin-bottom: 6px;
+			    }
+				.advantage .advantage_box li h4 {
+					font-size: 16px;
+			    	line-height: 42px;
+				}
+				.advantage .advantage_box li p {
+					font-size: 14px;
+			    	line-height: 26px;
+				}
+				/* 合作模式 */
+				.pattern .pattern_box .pattern_con li .pattern_div {
+					height: 56px;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div span {
+					height: 56px;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt h4 {
+				    font-size: 16px;
+				    line-height: 24px;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt p {
+					margin-top: 16px;
+				    font-size: 14px;
+				    line-height: 16px;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_btn {
+					padding: 13px 0;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_btn button {
+					font-size: 14px;
+				}
+			}
+			@media screen and (max-width: 750px) {
+				/* 云旅优势 */
+				.advantage .advantage_box li {
+				    float: none;
+				    width: 100%;
+				    padding: 0 2.2rem;
+				    text-align: center;
+				}
+				.advantage .advantage_box li+li {
+					margin-top: 1.7rem;
+				}
+				.advantage .advantage_box li h4 {
+					font-size: 1.6rem;
+			    	line-height: 3.4rem;
+			    	margin-top: 1.6rem;
+				}
+				.advantage .advantage_box li p {
+					font-size: 1.4rem;
+			    	line-height: 2.2rem;
+				}
+				/* 合作模式 */
+				.pattern .pattern_box .pattern_nav li {
+					margin: 0 4%;
+					font-size: 1.6rem;
+					line-height: 2.5rem;
+				}
+				.pattern .pattern_box .pattern_con {
+					margin-top: 2rem;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div {
+					position: relative;
+					height: auto;
+					padding: 1.7rem 0;
+					margin-top: 1.2rem;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div span {
+					float: none;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					width: 22%;
+					padding: 0 3%;
+					box-sizing: border-box;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div span img {
+					height: auto;
+				}	
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text {
+					width: 78%;
+					margin-left: 22%;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt {
+					float: none;
+					width: 100%;
+					border-right: none;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt h4 {
+					font-size: 1.6rem;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_txt p {
+					margin-top: 1rem;
+					font-size: 1.3rem;
+					line-height: 2rem;
+					overflow: visible;
+					text-overflow: clip;
+					white-space: normal;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div .pattern_text .pattern_btn {
+					float: none;
+					width: 100%;
+					padding: 1.4rem 0 0;
+					text-align: left;
+				}
+				.pattern .pattern_box .pattern_con li .pattern_div  .pattern_text .pattern_btn button {
+					font-size: 1.3rem;
+				}
+				/* 合作伙伴 */
+				.partner .partner_box {
+				    position: relative;
+				    padding-bottom: 1.4rem;
+				}
+				.partner .partner_box .partner_lunbo li {
+					margin-top: 0!important;
+				}
+				.partner .partner_box .partner_lunbo li div {
+					margin: 0;
+					padding: 0;
+					border: none;
+				}
+				.partner .partner_box .fenye span {
+				    width: 0.6rem;
+				    height: 0.6rem;
+				    margin: 0 0.3rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="maxwidth clearf">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo图" />
+					</a>
+				</div>
+				<div class="nav_btn"></div>
+				<ul class="nav clearf">
+					<li>
+						<a href="index.html">首页</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="union.html">云旅联盟</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="mass_innovate.html">众创空间</a>
+						<i></i>
+					</li>
+					<li class="active">
+						<a href="cooperate.html">合作伙伴</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="dynamic.html">云旅动态</a>
+						<i></i>
+					</li>
+					<li class="li_nav">
+						<a href="javascript:;">了解云旅</a>
+						<i></i>
+						<ul class="nav_c">
+							<li>
+								<a href="introduce.html">公司简介</a>
+							</li>
+							<li>
+								<a href="deeds.html">历史事迹</a>
+							</li>
+							<li>
+								<a href="case.html">客户案例</a>
+							</li>
+							<li>
+								<a href="join.html">加入我们</a>
+							</li>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<div class="headBtn">
+					<button class="login">登录</button>
+					<button class="register">注册</button>
+				</div>-->
+				<div class="cell clearf">
+					<i></i>
+					<span>0351-5679124</span>
+				</div>
+			</div>
+		</header>
+		
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- banner图 -->
+			<section class="banner">
+				<div class="banner_text">
+					<h1>云旅诚招优秀旅行社合作伙伴</h1>
+					<p>全面提升互联网时代旅行社运营管理水平</p>
+					<span class="blue_spot"></span>
+				</div>
+				<div class="banner_btn">
+					<!--<a href="">
+						<button class="white_blue">了解更多</button>
+					</a>-->
+					<a href="javascript:;">
+						<button class="clarity_white applybtn">加入云旅</button>
+					</a>
+				</div>
+			</section>
+			
+			<!-- 内容导航 -->
+			<section class="page_nav">
+				<ul class="nav_con clearf">
+					<li><a href="#advantage">云旅优势</a></li>
+					<li><a href="#pattern">合作模式</a></li>
+					<li><a href="#flow">合作流程</a></li>
+					<li><a href="#dynamic">近期动态</a></li>
+					<li><a href="#partner">合作伙伴</a></li>
+				</ul>
+			</section>
+			
+			<!-- 云旅优势 -->
+			<section class="advantage" id="advantage">
+				<div class="maxwidth">
+					<div class="title1">为什么成为云旅合作伙伴？</div>
+					<ul class="advantage_box clearf">
+						<li>
+							<div><img src="images/cooperate/coop01.jpg" alt="" /></div>
+							<h4>市场与营销协助</h4>
+							<p>社群论坛、联盟大会，等丰富的市场和营销机会，促进旅行社之间的交流讨论，共同成长</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/coop02.jpg" alt="" /></div>
+							<h4>闭环系统</h4>
+							<p>智能管理系统、PC定制网站、移动微店、用户社群、云旅帮助旅行社全面“互联网+”转型升级</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/coop03.jpg" alt="" /></div>
+							<h4>大数据资源库</h4>
+							<p>车房门餐导购娱，使旅行社实现集约采购带来的丰富优质资源和更低的成本，根本上提升市场竞争力</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/coop04.jpg" alt="" /></div>
+							<h4>业务支持</h4>
+							<p>一对一系统使用落地，全方位视频、PPT演讲+实战操作系统，哪里不懂看哪里</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- 合作模式 -->
+			<section class="pattern" id="pattern">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2>合作模式</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div class="pattern_box">
+						<ul class="pattern_nav">
+							<li class="active">产品合作伙伴</li>
+							<li>投资合作伙伴</li>
+						</ul>
+						<ul class="pattern_con">
+							<li>
+								<div class="pattern_div clearf">
+									<span><img src="images/cooperate/pattern01.png" alt="" /></span>
+									<div class="pattern_text clearf">
+										<div class="pattern_txt">
+											<h4>产品使用合作伙伴</h4>
+											<p title="云旅天下支持旅行社独立建设一整套B2B2C2B的闭环系统。">云旅天下支持旅行社独立建设一整套B2B2C2B的闭环系统。</p>
+										</div>
+										<div class="pattern_btn">
+											<button class="white_ash online">立即加入 </button>
+										</div>
+									</div>
+								</div>
+								<div class="pattern_div clearf">
+									<span><img src="images/cooperate/pattern02.png" alt="" /></span>
+									<div class="pattern_text clearf">
+										<div class="pattern_txt">
+											<h4>事业合伙人合作伙伴</h4>
+											<p title="既能省钱旅游，又能赚钱的低成本创业项目。它是旅行社的会员系统，分普通会员和高级会员，高级会员称之为事业合伙人。">既能省钱旅游，又能赚钱的低成本创业项目。它是旅行社的会员系统，分普通会员和高级会员，高级会员称之为事业合伙人。</p>
+										</div>
+										<div class="pattern_btn">
+											<button class="white_ash online">立即加入 </button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pattern_div clearf">
+									<span><img src="images/cooperate/pattern01.png" alt="" /></span>
+									<div class="pattern_text clearf">
+										<div class="pattern_txt">
+											<h4>投资合作伙伴</h4>
+											<p title="山西云旅天下科技有限公司是由多家旅游行业股东投资一家专注于旅游行业的科技创新公司，是国家级高新技术企业并拥有多项技术权利。">山西云旅天下科技有限公司是由多家旅游行业股东投资一家专注于旅游行业的科技创新公司，是国家级高新技术企业并拥有多项技术权利。</p>
+										</div>
+										<div class="pattern_btn">
+											<button class="white_ash online">立即加入 </button>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<!-- 合作流程 -->
+			<section class="flow" id="flow">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2 class="white">合作流程</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div class="flow_box">
+						<ul class="clearf">
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_3.png" alt="">
+								</div>
+								<p>联系商务客服</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_2.png" alt="">
+								</div>
+								<p>开测试账号试用系统</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_5.png" alt="">
+								</div>
+								<p>申请加入云旅</p>
+							</li>
+							<li>
+								<div class="flow_img">
+									<img src="images/flow_4.png" alt="">
+								</div>
+								<p>展开业务合作</p>
+							</li>
+						</ul>
+					</div>
+					<div class="flow_box2">
+						<ul>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_3.png" alt="">
+								</div>
+								<p><span>①</span>联系商务客服</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_2.png" alt="">
+								</div>
+								<p><span>②</span>开测试账号试用系统</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_5.png" alt="">
+								</div>
+								<p><span>③</span>申请加入云旅</p>
+							</li>
+							<li class="clearf">
+								<div class="flow_img">
+									<img src="images/flow2_4.png" alt="">
+								</div>
+								<p><span>④</span>展开业务合作</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<!-- 近期动态 -->
+			<section class="dynamic" id="dynamic">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2>近期动态</h2>
+						<p>SOLUTION</p>
+					</div>
+					<ul class="dynamic_con clearf">
+						<li>
+							<div>
+								<img src="images/news/new1.jpg" alt="" />
+							</div>
+							<p>一年一度联盟大会</p>
+						</li>
+						<li>
+							<div>
+								<img src="images/news/new1.jpg" alt="" />
+							</div>
+							<p>一年一度联盟大会</p>
+						</li>
+						<li>
+							<div>
+								<img src="images/news/new1.jpg" alt="" />
+							</div>
+							<p>一年一度联盟大会</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- 合作伙伴 -->
+			<section class="partner" id="partner">
+				<div class="maxwidth">
+					<div class="title2">
+						<h2>部分合作伙伴</h2>
+						<p>SOLUTION</p>
+					</div>
+					<div style="padding-bottom: 0;" class="partner_box">
+						<div class="swiper-container partner_lunbo">
+				        	<ul class="swiper-wrapper clear">
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/beijingguangxin.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/quanqiufengxing.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/chongqingzhongqinglv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/yangzhouzhongqinglv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/haqinglv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/jiangxiguangda.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/sijifeng.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/hebeizongheng.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/xinjiangzhongqinglv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/beihaihuanqiu.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/youxiang.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/heshunguolv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/haerbinjintaiyang.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/huayinglvyou.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/huayueguolv.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/ningxiadaziran.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/xianjiari.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/tianjinzhonghe.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/jiexiuxvri.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/mengzhiyuan.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/nanjingdahua.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/yanbiankanghui.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/zhangjiakouyangguang.png" alt="" />
+			        				</div>
+				        		</li>
+				        		<li class="swiper-slide">
+			        				<div>
+			        					<img src="images/logo/zhongyouguolv.png" alt="" />
+			        				</div>
+				        		</li>
+				        	</ul>
+				        </div>
+					    <!-- 如果需要分页器 -->
+					    <div style="display: none;" class="swiper-pagination fenye"></div>
+
+					    <!-- 如果需要导航按钮 -->
+					    <!--<div class="swiper-button-prev"></div>-->
+					    <!--<div class="swiper-button-next"></div>-->
+
+					    <!-- 如果需要滚动条 -->
+					    <!--<div class="swiper-scrollbar"></div>-->
+					</div>
+				</div>
+				
+			</section>
+			
+			<!-- 图标 -->
+			<section class="icon_nav">
+				<div class="maxwidth">
+					<ul class="icon_nav_con clearf">
+						<li>
+							<div><img src="images/cooperate/icon_nav01.png" alt="" /></div>
+							<p>集成方案咨询</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav02.png" alt="" /></div>
+							<p>集成技术支持</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav03.png" alt="" /></div>
+							<p>实施指导</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav04.png" alt="" /></div>
+							<p>售前培训</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav05.png" alt="" /></div>
+							<p>代运为服务</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav06.png" alt="" /></div>
+							<p>市场支持</p>
+						</li>
+						<li>
+							<div><img src="images/cooperate/icon_nav07.png" alt="" /></div>
+							<p>商机转达</p>
+						</li
+					</ul>
+				</div>
+			</section>
+		</div>
+		
+		<!-- 尾部 -->
+		<footer>
+			<div class="maxwidth">
+				<div class="nav-block clearf">
+					<ul>
+						<li>
+							<h4>云旅</h4>
+							<p>Yunlv</p>
+						</li>
+						<li>
+							<p><a href="union.html">云旅联盟</a></p>
+						</li>
+						<li>
+							<p><a href="mass_innovate.html">众创空间</a></p>
+						</li>
+						<li>
+							<p><a href="cooperate.html">合作伙伴</a></p>
+						</li>
+						<li>
+							<p><a href="dynamic.html">云旅动态</a></p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>关于</h4>
+							<p>About</p>
+						</li>
+						<li>
+							<p><a href="introduce.html">公司简介</a></p>
+						</li>
+						<li>
+							<p><a href="deeds.html">历史事迹</a></p>
+						</li>
+						<li>
+							<p><a href="case.html">客户案例</a></p>
+						</li>
+						<li>
+							<p><a href="join.html">加入我们</a></p>
+						</li>
+						<li>
+							<p><a href="contact.html">联系我们</a></p>
+							
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>商务合作</h4>
+							<p>Business</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679124</p>
+						</li>
+						<li>
+							<p>客服邮箱：zhaoliming@yunlvkeji.com</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<h4>联系我们</h4>
+							<p>Conntacts</p>
+						</li>
+						<li>
+							<p>公司地址：山西省太原市南内环街清控创新基地D座20层</p>
+						</li>
+						<li>
+							<p>邮箱：yangqing@yunlvkeji.com</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679128</p>
+						</li>
+						<li>
+							<p class="public_num">
+								关注云旅公众号
+								<i>
+									<span>
+										<img src="images/code.jpg"/>
+									</span>
+								</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile_footer">
+					<dl class="about_us">
+						<dt>了解云旅</dt>
+							<dd><a href="introduce.html">公司简介</a></dd>
+							<dd><a href="deeds.html">历史事迹</a></dd>
+							<dd><a href="case.html">客户案例</a></dd>
+							<dd><a href="join.html">加入我们</a></dd>
+							<dd><a href="contact.html">联系我们</a></dd>
+					</dl>
+					<div class="contact_us">
+						<ul>
+							<li>商务合作：0351-5679124</li>
+							<li>客服邮箱：zhaoliming@yunlvkeji.com</li>
+							<li>业务咨询：0351-5679128</li>
+						</ul>
+						<div class="code">
+							<img src="images/code.jpg" alt="" />
+							<p>关注云旅公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="maxwidth clearf">
+					<p>Copyright © 2014-2018 yunlvkeji.com All Rights Reserved.</p>
+					<p>山西云旅天下科技有限公司</p>
+					<p>晋ICP备17002131号</p>
+				</div>
+			</div>
+		</footer>
+		<!-- 移动端底按钮 -->
+		<section class="footer_btn clearf">
+			<a class="cell_consult" href="tel:0351-5679124">电话咨询</a>
+			<a class="apply_trial applybtn" href="javascript:;">申请试用</a>
+		</section>
+		
+		
+		<!-- 遮罩层 -->
+		<section id="mask"></section>
+		<section id="black"></section>
+		
+		<!-- 申请弹窗 -->
+		<div class="applyBg">
+			<form id="applyForm" action="" method="post">
+				<div class="applyBox">
+					<i class="shut">×</i>
+					<div class="formHead">
+						<h1>云旅 · 旅管系统 · 申请表单</h1>
+						<p>提交审核后，云旅业务人员会尽快联系您，了解您的业务需求</p>
+					</div>
+					<ul class="formCon">
+						<li>
+							<span></span>
+							<p>姓名</p>
+							<input type="text" name="username" placeholder="请输入您的姓名" />
+						</li>
+						<li>
+							<span></span>
+							<p>职位</p>
+							<input type="text" name="place" placeholder="请输入您的职位" />
+						</li>
+						<li>
+							<span></span>
+							<p>机构</p>
+							<input type="text" name="organization" placeholder="请输入您的公司名称或机构名称" />
+						</li>
+						<li>
+							<span></span>
+							<p>手机号</p>
+							<input type="text" name="cellnumber" placeholder="请输入您的手机号" />
+						</li>
+						<li>
+							<span></span>
+							<p>邮箱</p>
+							<input type="text" name="mailbox" placeholder="请输入您的邮箱" />
+						</li>
+					</ul>
+					<div class="formFoot">
+						<button id="applySubmit" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 侧边栏 -->
+		<aside class="toolbar">
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+			   	<span class="toolbar-layer">
+			   		<img src="images/code.jpg" alt="" />
+			   	</span>
+		   	</a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-qq"></a>
+		   	<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</aside>
+		
+		<!-- 产品咨询与反馈 -->
+		<section class="wicket feedback">
+	   		<i class="cha cancel">×</i>
+	   		<span class="feedbackPng"></span>
+	   		<h1>产品咨询与反馈</h1>
+	   		<form id="feedbackForm" action="" method="post">
+		   		<ul class="feedbackTxt">
+		   			<li>
+		   				<span>反馈类别</span>
+		   				<label for="product">
+		   					<input type="radio" name="leibie" id="product" value="产品咨询" checked />
+		   					<i></i>
+		   					<span>产品咨询</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span>反馈类型</span>
+		   				<label for="enterprise">
+		   					<input type="radio" name="genre" id="enterprise" value="企业业务" checked />
+		   					<i></i>
+		   					<span>企业业务</span>
+		   				</label>
+		   				<label for="personal">
+		   					<input type="radio" name="genre" id="personal" value="个人业务" />
+		   					<i></i>
+		   					<span>个人业务</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span class="vtop">反馈内容</span>
+		   				<textarea class="fTextarea" placeholder="欢迎将您遇到的问题或建议反馈给我们" name="content"></textarea>
+		   			</li>
+		   			<li>
+		   				<span>公司名称</span>
+		   				<input class="companyName" type="text" name="comname" id="" value="" placeholder="请输入公司名称"       />
+		   			</li>
+		   			<li>
+		   				<span>联系手机</span>
+		   				<div class="select">
+		   					<select name="zone">
+			   					<option value="+86" selected>中国大陆 +86</option>
+			   					<option value="+852">中国香港 +852</option>
+			   					<option value="+886">中国台湾 +886</option>
+			   					<option value="+853">中国澳门 +853</option>
+			   				</select>
+		   				</div>
+		   				<input class="phone" type="text" name="phonenumber" id="" value="" placeholder="请输入手机号" />
+		   				<i class="hao"></i>
+		   			</li>
+		   			<li>
+		   				<span>验证码</span>
+		   				<input class="test" type="text" name="code" id="" value="" placeholder="请输入验证码" />
+		   				<button id="gain" type="button">发送验证码</button>
+		   			</li>
+		   			<li>
+		   				<div class="cue clearf">
+		   					<span>温馨提示：</span>
+		   					<p>1.反馈会在1个工作日内与您联系（工作时间：<span>周一至周六，8:30-18:00</span>）。<br />2.产品使用过程中遇到的问题，您可以通过与<span>客服联系</span>获得第一时间解答。<br />3.紧急问题建议您拨打400-100-100。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   		<div class="feedbackBtn">
+		   			<button id="submit" type="submit">提交</button>
+		   			<button id="cancel" type="button">取消</button>
+		   		</div>
+	   		</form>
+   	   	</section>
+		
+		<!-- 在线咨询 -->
+	   	<section class="wicket consult">
+	   		<i class="cha close">×</i>
+	   		<span class="consultPng"></span>
+	   		<h1>在线咨询</h1>
+	   		<ul class="consultTxt">
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/sale.png"/></span>
+	   				<span>市场销售</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3105422703&site=qq&menu=yes"><span>商务</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/skill.png"/></span>
+	   				<span>技术支持</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851628746&site=qq&menu=yes"><span>技术</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/adviser.png"/></span>
+	   				<span>售后顾问</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1730648658&site=qq&menu=yes"><span>客服</span></a>
+	   				</div>
+	   			</li>
+	   		</ul>
+	   	</section>
+		<script type="text/javascript">
+			//合作模式
+			$(".pattern_nav").children("li").click(function() {
+		        var n=$(this).index();
+		        $(this).addClass("active");
+		        $(this).siblings().removeClass("active");
+		        $(".pattern_con").children("li").eq(n).css("display","block").siblings().css("display","none");
+		    });
+		    
+		    var mySwiper = new Swiper ('.partner_lunbo', {
+		    	loop: true,
+			    slidesPerView: 6,
+      			slidesPerColumn: 2,
+        		paginationClickable: true,
+			    
+			    // 如果需要分页器
+			    pagination: '.fenye',
+			    
+			    // 如果需要前进后退按钮
+//				nextButton: '.swiper-button-next',
+//				prevButton: '.swiper-button-prev',
+			    
+			    // 如果需要滚动条
+				//	scrollbar: '.swiper-scrollbar',
+			});
+		</script>
+	</body>
+</html>

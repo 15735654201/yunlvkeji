@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv=“X-UA-Compatible” content=“IE=edge,chrome=1”>
+		<title>公司新闻</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/froala_editor.min.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fontsize.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
+		<style type="text/css">
+			/* 头部 */
+			header {
+				background-color: #000000!important;
+			}
+			header:hover {
+			    background-color: #000000!important;
+			}
+			.content {
+				padding-top: 80px;
+			}
+			/* 新闻内容 */
+			.content .news_box {
+				padding: 46px 0;
+			}
+			.content .news_box .news_nav {
+				padding: 0 0.5% 1%;
+			}
+			.content .news_box .news_nav a {
+				color: #666666;
+				font-size: 16px;
+				line-height: 46px;
+			}
+			.content .news_box .news_nav a:hover {
+				color: #5e81e6;
+			}
+			.content .news_box .news_nav a:after {
+				color: #666666;
+				content: ">";
+				display: inline-block;
+				margin-left: 0.5em;
+			}
+			.content .news_box .news_nav a:last-child:after {
+				content: "";
+			}
+			.content .news_box .news_con {
+				border: 1px solid #bfbfbf;
+				border-left: none;
+				border-right: none;
+			}
+			.content .news_box .news_con .news_title {
+				color: #666666;
+				padding: 0 5%;
+				margin: 4.2% 0;
+				font-weight: 400;
+				font-size: 26px;
+				text-align: center;
+				line-height: 32px;
+			}
+			.content .news_box .news_con .news_time {
+				color: #999999;
+				padding: 0 10%;
+				font-size: 12px;
+				text-align: right;
+			}
+			.content .news_box .news_con .news_text {
+				color: #666666;
+				padding: 0 10%;
+				margin-top: 60px;
+				font-size: 16px;
+				line-height: 36px;
+				word-wrap: break-word;
+				word-break:break-all;
+				word-break: normal;
+			}
+			.content .news_box .news_con .news_text .paging {
+				font-size: 16px;
+				margin: 34px 0;
+			}
+			.content .news_box .news_con .news_text .paging div {
+				float: left;
+				max-width: 400px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.content .news_box .news_con .news_text .paging div:last-child {
+				float: right;
+			}
+			.content .news_box .news_con .news_text .paging div a{
+				color: #666666;
+				
+			}
+			.content .news_box .news_con .news_text .paging div a:hover {
+				color: #5E81E6;
+			}
+			
+			/* 自适应 */
+			@media screen and (max-width: 1366px) {
+				.content {
+					padding-top: 60px;
+				}
+				.content .news_box .news_nav a {
+					font-size: 14px;
+			    	line-height: 40px;
+				}
+				.content .news_box .news_con .news_title {
+					font-size: 24px;
+			     	line-height: 28px;
+				}
+				.content .news_box .news_con .news_text .paging {
+					font-size: 14px;
+			    	margin: 30px 0;
+				}
+			}
+			@media screen and (max-width: 750px) {
+				.content {
+					padding-top: 4.4rem;
+				}
+				
+				/* 新闻内容 */
+				.content .news_box {
+					padding: 2rem 0;
+				}
+				.content .news_box .news_nav a {
+					font-size: 1.4rem;
+					line-height: 4rem;
+				}
+				.content .news_box .news_con .news_title {
+					font-size: 2.2rem;
+					line-height: 1.6em;
+				}
+				.content .news_box .news_con .news_time {
+					padding: 0;
+					font-size: 1.2rem;
+				}
+				.content .news_box .news_con .news_text {
+					padding: 0;
+					margin-top: 3rem;
+					font-size: 1.8rem;
+					line-height: 2em;
+				}
+				.content .news_box .news_con .news_text .paging {
+					font-size: 1.6rem;
+					margin: 2em 0;
+				}
+				.content .news_box .news_con .news_text .paging div {
+					max-width: 100%;
+					float: none;
+				}
+				.content .news_box .news_con .news_text .paging div:last-child {
+					float: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="maxwidth clearf">
+				<div class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="logo图" />
+					</a>
+				</div>
+				<div class="nav_btn"></div>
+				<ul class="nav clearf">
+					<li>
+						<a href="index.html">首页</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="union.html">云旅联盟</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="mass_innovate.html">众创空间</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="cooperate.html">合作伙伴</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="dynamic.html">云旅动态</a>
+						<i></i>
+					</li>
+					<li class="li_nav">
+						<a href="javascript:;">了解云旅</a>
+						<i></i>
+						<ul class="nav_c">
+							<li>
+								<a href="introduce.html">公司简介</a>
+							</li>
+							<li>
+								<a href="deeds.html">历史事迹</a>
+							</li>
+							<li>
+								<a href="case.html">客户案例</a>
+							</li>
+							<li>
+								<a href="join.html">加入我们</a>
+							</li>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--<div class="headBtn">
+					<button class="login">登录</button>
+					<button class="register">注册</button>
+				</div>-->
+				<div class="cell clearf">
+					<i></i>
+					<span>0351-5679124</span>
+				</div>
+			</div>
+		</header>
+		
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- 新闻内容-->
+			<section class="news_box">
+				<div class="maxwidth">
+					<nav class="news_nav">
+						<a href="">首页</a>
+						<a href="">新闻列表</a>
+					</nav>
+					<div class="news_con">
+						<h2 class="news_title">云旅联盟云旅科技互联网+技互联网放开你功夫肯尼客服喝咖 </h2>
+						<div class="news_time">发布时间：<span>2018-08-25 09:26:41</span></div>
+						<div class="news_text">
+							<div class="con">
+								<p>中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。中新网9月25日电 据深圳市互联网信息办公室官方微信消息，近日，网络上出现了关于深圳将成为直辖市的传言。对此，深圳市政府新闻办负责人指出，此传闻毫无事实根据，纯属个别网友的猜测。</p>
+							</div>
+							<div class="paging clearf">
+								<div>上一篇：<a href="">共促“互联网+”创新</a></div>
+								<div>下一篇：<a href="">共促“互联网+”创新</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<!-- 尾部 -->
+		<footer>
+			<div class="maxwidth">
+				<div class="nav-block clearf">
+					<ul>
+						<li>
+							<h4>云旅</h4>
+							<p>Yunlv</p>
+						</li>
+						<li>
+							<p><a href="union.html">云旅联盟</a></p>
+						</li>
+						<li>
+							<p><a href="mass_innovate.html">众创空间</a></p>
+						</li>
+						<li>
+							<p><a href="cooperate.html">合作伙伴</a></p>
+						</li>
+						<li>
+							<p><a href="dynamic.html">云旅动态</a></p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>关于</h4>
+							<p>About</p>
+						</li>
+						<li>
+							<p><a href="introduce.html">公司简介</a></p>
+						</li>
+						<li>
+							<p><a href="deeds.html">历史事迹</a></p>
+						</li>
+						<li>
+							<p><a href="case.html">客户案例</a></p>
+						</li>
+						<li>
+							<p><a href="join.html">加入我们</a></p>
+						</li>
+						<li>
+							<p><a href="contact.html">联系我们</a></p>
+							
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<h4>商务合作</h4>
+							<p>Business</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679124</p>
+						</li>
+						<li>
+							<p>客服邮箱：zhaoliming@yunlvkeji.com</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li>
+							<h4>联系我们</h4>
+							<p>Conntacts</p>
+						</li>
+						<li>
+							<p>公司地址：山西省太原市南内环街清控创新基地D座20层</p>
+						</li>
+						<li>
+							<p>邮箱：yangqing@yunlvkeji.com</p>
+						</li>
+						<li>
+							<p>联系电话：0351-5679128</p>
+						</li>
+						<li>
+							<p class="public_num">
+								关注云旅公众号
+								<i>
+									<span>
+										<img src="images/code.jpg"/>
+									</span>
+								</i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile_footer">
+					<dl class="about_us">
+						<dt>了解云旅</dt>
+							<dd><a href="introduce.html">公司简介</a></dd>
+							<dd><a href="deeds.html">历史事迹</a></dd>
+							<dd><a href="case.html">客户案例</a></dd>
+							<dd><a href="join.html">加入我们</a></dd>
+							<dd><a href="contact.html">联系我们</a></dd>
+					</dl>
+					<div class="contact_us">
+						<ul>
+							<li>商务合作：0351-5679124</li>
+							<li>客服邮箱：zhaoliming@yunlvkeji.com</li>
+							<li>业务咨询：0351-5679128</li>
+						</ul>
+						<div class="code">
+							<img src="images/code.jpg" alt="" />
+							<p>关注云旅公众号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="maxwidth clearf">
+					<p>Copyright © 2014-2018 yunlvkeji.com All Rights Reserved.</p>
+					<p>山西云旅天下科技有限公司</p>
+					<p>晋ICP备17002131号</p>
+				</div>
+			</div>
+		</footer>
+		<!-- 移动端底按钮 -->
+		<section class="footer_btn clearf">
+			<a class="cell_consult" href="tel:0351-5679124">电话咨询</a>
+			<a class="apply_trial applybtn" href="javascript:;">申请试用</a>
+		</section>
+		
+		<!-- 遮罩层 -->
+		<section id="mask"></section>
+		<section id="black"></section>
+		
+		<!-- 申请弹窗 -->
+		<div class="applyBg">
+			<form id="applyForm" action="" method="post">
+				<div class="applyBox">
+					<i class="shut">×</i>
+					<div class="formHead">
+						<h1>云旅 · 旅管系统 · 申请表单</h1>
+						<p>提交审核后，云旅业务人员会尽快联系您，了解您的业务需求</p>
+					</div>
+					<ul class="formCon">
+						<li>
+							<span></span>
+							<p>姓名</p>
+							<input type="text" name="username" placeholder="请输入您的姓名" />
+						</li>
+						<li>
+							<span></span>
+							<p>职位</p>
+							<input type="text" name="place" placeholder="请输入您的职位" />
+						</li>
+						<li>
+							<span></span>
+							<p>机构</p>
+							<input type="text" name="organization" placeholder="请输入您的公司名称或机构名称" />
+						</li>
+						<li>
+							<span></span>
+							<p>手机号</p>
+							<input type="text" name="cellnumber" placeholder="请输入您的手机号" />
+						</li>
+						<li>
+							<span></span>
+							<p>邮箱</p>
+							<input type="text" name="mailbox" placeholder="请输入您的邮箱" />
+						</li>
+					</ul>
+					<div class="formFoot">
+						<button id="applySubmit" type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 侧边栏 -->
+		<aside class="toolbar">
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-weixin">
+			   	<span class="toolbar-layer">
+			   		<img src="images/code.jpg" alt="" />
+			   	</span>
+		   	</a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-feedback"></a>
+		   	<a href="javascript:;" class="toolbar-item toolbar-item-qq"></a>
+		   	<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</aside>
+		
+		<!-- 产品咨询与反馈 -->
+		<section class="wicket feedback">
+	   		<i class="cha cancel">×</i>
+	   		<span class="feedbackPng"></span>
+	   		<h1>产品咨询与反馈</h1>
+	   		<form id="feedbackForm" action="" method="post">
+		   		<ul class="feedbackTxt">
+		   			<li>
+		   				<span>反馈类别</span>
+		   				<label for="product">
+		   					<input type="radio" name="leibie" id="product" value="产品咨询" checked />
+		   					<i></i>
+		   					<span>产品咨询</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span>反馈类型</span>
+		   				<label for="enterprise">
+		   					<input type="radio" name="genre" id="enterprise" value="企业业务" checked />
+		   					<i></i>
+		   					<span>企业业务</span>
+		   				</label>
+		   				<label for="personal">
+		   					<input type="radio" name="genre" id="personal" value="个人业务" />
+		   					<i></i>
+		   					<span>个人业务</span>
+		   				</label>
+		   			</li>
+		   			<li>
+		   				<span class="vtop">反馈内容</span>
+		   				<textarea class="fTextarea" placeholder="欢迎将您遇到的问题或建议反馈给我们" name="content"></textarea>
+		   			</li>
+		   			<li>
+		   				<span>公司名称</span>
+		   				<input class="companyName" type="text" name="comname" id="" value="" placeholder="请输入公司名称"       />
+		   			</li>
+		   			<li>
+		   				<span>联系手机</span>
+		   				<div class="select">
+		   					<select name="zone">
+			   					<option value="+86" selected>中国大陆 +86</option>
+			   					<option value="+852">中国香港 +852</option>
+			   					<option value="+886">中国台湾 +886</option>
+			   					<option value="+853">中国澳门 +853</option>
+			   				</select>
+		   				</div>
+		   				<input class="phone" type="text" name="phonenumber" id="" value="" placeholder="请输入手机号" />
+		   				<i class="hao"></i>
+		   			</li>
+		   			<li>
+		   				<span>验证码</span>
+		   				<input class="test" type="text" name="code" id="" value="" placeholder="请输入验证码" />
+		   				<button id="gain" type="button">发送验证码</button>
+		   			</li>
+		   			<li>
+		   				<div class="cue clearf">
+		   					<span>温馨提示：</span>
+		   					<p>1.反馈会在1个工作日内与您联系（工作时间：<span>周一至周六，8:30-18:00</span>）。<br />2.产品使用过程中遇到的问题，您可以通过与<span>客服联系</span>获得第一时间解答。<br />3.紧急问题建议您拨打400-100-100。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   		<div class="feedbackBtn">
+		   			<button id="submit" type="submit">提交</button>
+		   			<button id="cancel" type="button">取消</button>
+		   		</div>
+	   		</form>
+   	   	</section>
+		
+		<!-- 在线咨询 -->
+	   	<section class="wicket consult">
+	   		<i class="cha close">×</i>
+	   		<span class="consultPng"></span>
+	   		<h1>在线咨询</h1>
+	   		<ul class="consultTxt">
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/sale.png"/></span>
+	   				<span>市场销售</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3105422703&site=qq&menu=yes"><span>商务</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/skill.png"/></span>
+	   				<span>技术支持</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2851628746&site=qq&menu=yes"><span>技术</span></a>
+	   				</div>
+	   			</li>
+	   			<li class="clearf">
+	   				<span class="xicon"><img src="images/adviser.png"/></span>
+	   				<span>售后顾问</span>
+	   				<div>
+	   					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1730648658&site=qq&menu=yes"><span>客服</span></a>
+	   				</div>
+	   			</li>
+	   		</ul>
+	   	</section>
+	</body>
+</html>
